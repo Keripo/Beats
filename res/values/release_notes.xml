@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- Placed here for easy updating -->
+<string name="App_version">"1.7.2b FINAL"</string>
+
+<!-- MenuHome -->
+<string name="MenuHome_new_user_notes">
+"~ What is Beats\? ~
+Thank you for downloading the beta release of Beats. \"Beats, Advanced Rhythm Game\" is a music-based rhythm game for Google Android phones/devices. Press arrows to the beat of songs StepMania/DDR style or tap circles osu!/Ouendan style! Similar to Dance Dance Revolution (DDR), Beatmania IIDX, DJ Max, Tap Tap Revenge, Osu! Tatakae! Ouendan, Elite Beat Agents, Project DIVA, etc.
+
+Like most rhythm games, Beats has a VERY steep learning curve. New players may want to change the default difficulty from \"Medium\" to \"Easy\". Some downloaded songs are only meant for hardcore StepMania/osu! players.
+
+Beats currently does NOT auto-generate stepfiles for the music files you already have on your phone. Beats comes with a sample song pack that installs on first run, but there are PLENTY more that you can download from the internet!
+
+~ Songs ~
+Use \"DOWNLOAD SONGS\" to download more songs from BeatsPortable via your web browser. The custom Google search engine will let you find songs from popular stepfile sites on the internet.
+
+StepMania players can copy over their current collections directly to the Beats/Songs folder on your SD card. Beats currently only supports user-generated stepfiles that follow the StepMania 3.9 \".sm\" format and the Dance With Intensity v2.50.00 \".dwi\" format. There is currently only partial support for the osu! v5 \".osu\" format. More file formats will be supported in Beats2 - see http://code.google.com/p/beatsportable/.
+
+~ Gameplay ~
+To get started, use \"SELECT SONG\" to browse to and select the song/stepfile you want to play (a stepfile is the pattern of notes that corresponds to a song).
+
+If you\'re new to rhythm-based games, here\'s the general idea: wait until the notes reach the arrows at the bottom of the screen and then tap the arrows. In the \"osu! Mod\" Game Mode, instead of tapping the arrows at the bottom, tap the circles when the outer ring matches the circle.
+
+The more on-beat you are, the better your score! You can also pause your game at any time by pressing your phone\'s MENU or SEARCH keys. Check out the demo video to see Beats in action! 
+
+Make sure to explore the \"SETTINGS\" section afterwards to check out all the cool modifiers/tweaks you can use to improve your gameplay experience. Important settings worth checking out are \"Game Mode\", \"Tapbox Layout\", and \"Modifiers\".
+
+~ Feedback/Bugs ~
+If you encounter any major bugs or have suggestions, please visit BeatsPortable website and post on the forums. If you would like to help with testing the latest development build of Beats or would like to help translate Beats to another language, please visit our Google group via the website's Update tab.
+
+Enjoy the beta release!
+
+~Keripo
+"
+</string>
+<string name="MenuHome_release_notes">
+"This is the FINAL version of Beats. Future development will continue with the open source \"Beats 2\" project. See http://code.google.com/p/beats2/ for more details.
+
+Beats 1.7.2b FINAL - Changeset [r17]
+- Android 4.x ICS support (tested on CyanogenMod 10 nightly)
+- all speed multipliers effectiveness DOUBLED, please adjust your settings!
+- fixed Graphics zip delete error
+- updated AdMob to v6.2.1
+- updated Immersion MOTIV Haptic Effects to v3.5.39.3
+- updated Localytics
+- updated all translation
+
+~Keripo
+
+Disclaimer:
+This beta release is for use as is, no warrantees expressed or implied. We are not responsible for any damage that may result from usage of this app. Information may be collected via Localytics for feature testing and feedback purposes.
+"
+</string>
+
+</resources>

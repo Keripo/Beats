@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- See arrays_trans for translatable strings -->
+	
+	<string-array name="toggleValues">
+		<item>0</item>
+		<item>1</item>
+	</string-array>
+	
+	<string-array name="difficultyLevelValues">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+	
+	<string-array name="speedMultiplier">
+		<item>1.00x</item>
+		<item>1.25x</item>
+		<item>1.50x</item>
+		<item>1.75x</item>
+		<item>2.00x</item>
+		<item>2.25x</item>
+		<item>2.50x</item>
+		<item>2.75x</item>
+		<item>3.00x</item>
+		<item>3.50x</item>
+		<item>4.00x</item>
+		<item>5.00x</item>
+	</string-array>
+	<string-array name="speedMultiplierValues">
+		<item>1</item>
+		<item>1.25</item>
+		<item>1.5</item>
+		<item>1.75</item>
+		<item>2</item>
+		<item>2.25</item>
+		<item>2.5</item>
+		<item>2.75</item>
+		<item>3</item>
+		<item>3.5</item>
+		<item>4</item>
+		<item>5</item>
+	</string-array>
+	
+	<string-array name="randomizeValues">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	
+	<string-array name="gameModeValues">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	
+	<string-array name="noteskinValues">
+		<item>default</item>
+		<item>original</item>
+		<item>custom</item>
+	</string-array>
+	
+	<string-array name="backgroundImageValues">
+		<item>blue</item>
+		<item>red</item>
+		<item>white</item>
+	</string-array>
+	
+	<string-array name="backgroundBrightness">
+		<item>100%</item>
+		<item>75%</item>
+		<item>50%</item>
+		<item>25%</item>
+		<item>10%</item>
+	</string-array>
+	<string-array name="backgroundBrightnessValues">
+		<item>100</item>
+		<item>75</item>
+		<item>50</item>
+		<item>25</item>
+		<item>10</item>
+	</string-array>
+	
+	<string-array name="orientationValues">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	
+	<!--
+	<string-array name="fps">
+		<item>20 Hz</item>
+		<item>30 Hz</item>
+		<item>40 Hz</item>
+		<item>50 Hz</item>
+		<item>60 Hz</item>
+		<item>999 Hz</item>
+	</string-array>
+	-->
+	<!-- 1000/fps -->
+	<!-- 
+	<string-array name="fpsValues">
+		<item>50</item>
+		<item>33</item>
+		<item>25</item>
+		<item>20</item>
+		<item>16</item>
+		<item>1</item>
+	</string-array>
+	-->
+	
+	<string-array name="tapboxLayoutValues">
+		<item>d-pad</item>
+		<item>curved</item>
+		<item>curved-r</item>
+		<item>standard</item>
+		<item>fullscreen</item>
+	</string-array>
+	
+	<string-array name="tapboxYOffset">
+		<item>+70 px</item>
+		<item>+60 px</item>
+		<item>+50 px</item>
+		<item>+40 px</item>
+		<item>+30 px</item>
+		<item>+20 px</item>
+		<item>+10 px</item>
+		<item>+0 px</item>
+		<item>-10 px</item>
+		<item>-20 px</item>
+		<item>-30 px</item>
+		<item>-40 px</item>
+		<item>-50 px</item>
+		<item>-60 px</item>
+		<item>-70 px</item>
+	</string-array>
+	<string-array name="tapboxYOffsetValues">
+		<item>70</item>
+		<item>60</item>
+		<item>50</item>
+		<item>40</item>
+		<item>30</item>
+		<item>20</item>
+		<item>10</item>
+		<item>0</item>
+		<item>-10</item>
+		<item>-20</item>
+		<item>-30</item>
+		<item>-40</item>
+		<item>-50</item>
+		<item>-60</item>
+		<item>-70</item>
+	</string-array>
+	
+	<string-array name="tapboxOverlap">
+		<item>0%</item>
+		<item>10%</item>
+		<item>20%</item>
+		<item>30%</item>
+		<item>40%</item>
+	</string-array>
+	<string-array name="tapboxOverlapValues">
+		<item>0</item>
+		<item>0.1</item>
+		<item>0.2</item>
+		<item>0.3</item>
+		<item>0.4</item>
+	</string-array>
+	
+	<string-array name="noteAppearanceValues">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	
+	<string-array name="vibrateMissValues">
+		<item>2</item>
+		<item>1</item>
+		<item>0</item>
+	</string-array>
+	
+	<!-- Machine Settings -->
+	<string-array name="syncDuration">
+		<item>0.50s</item>
+		<item>1.00s</item>
+		<item>1.50s</item>
+		<item>2.00s</item>
+	</string-array>
+	<string-array name="syncDurationValues">
+		<item>256</item>
+		<item>512</item>
+		<item>768</item>
+		<item>1024</item>
+	</string-array>
+	
+	<string-array name="manualOffset">
+		<item>-0.400s</item>
+		<item>-0.387s</item>
+		<item>-0.375s</item>
+		<item>-0.362s</item>
+		<item>-0.350s</item>
+		<item>-0.337s</item>
+		<item>-0.325s</item>
+		<item>-0.312s</item>
+		<item>-0.300s</item>
+		<item>-0.287s</item>
+		<item>-0.275s</item>
+		<item>-0.262s</item>
+		<item>-0.250s</item>
+		<item>-0.237s</item>
+		<item>-0.225s</item>
+		<item>-0.212s</item>
+		<item>-0.200s</item>
+		<item>-0.187s</item>
+		<item>-0.175s</item>
+		<item>-0.162s</item>
+		<item>-0.150s</item>
+		<item>-0.137s</item>
+		<item>-0.125s</item>
+		<item>-0.112s</item>
+		<item>-0.100s</item>
+		<item>-0.087s</item>
+		<item>-0.075s</item>
+		<item>-0.062s</item>
+		<item>-0.050s</item>
+		<item>-0.037s</item>
+		<item>-0.025s</item>
+		<item>-0.012s</item>
+		<item>+0.000s</item>
+		<item>+0.012s</item>
+		<item>+0.025s</item>
+		<item>+0.037s</item>
+		<item>+0.050s</item>
+		<item>+0.062s</item>
+		<item>+0.075s</item>
+		<item>+0.087s</item>
+		<item>+0.100s</item>
+		<item>+0.112s</item>
+		<item>+0.125s</item>
+		<item>+0.137s</item>
+		<item>+0.150s</item>
+		<item>+0.162s</item>
+		<item>+0.175s</item>
+		<item>+0.187s</item>
+		<item>+0.200s</item>
+		<item>+0.212s</item>
+		<item>+0.225s</item>
+		<item>+0.237s</item>
+		<item>+0.250s</item>
+		<item>+0.262s</item>
+		<item>+0.275s</item>
+		<item>+0.287s</item>
+		<item>+0.300s</item>
+		<item>+0.312s</item>
+		<item>+0.325s</item>
+		<item>+0.337s</item>
+		<item>+0.350s</item>
+		<item>+0.362s</item>
+		<item>+0.375s</item>
+		<item>+0.387s</item>
+		<item>+0.400s</item>
+	</string-array>
+	<string-array name="manualOffsetValues">
+		<item>-400</item>
+		<item>-387</item>
+		<item>-375</item>
+		<item>-362</item>
+		<item>-350</item>
+		<item>-337</item>
+		<item>-325</item>
+		<item>-312</item>
+		<item>-300</item>
+		<item>-287</item>
+		<item>-275</item>
+		<item>-262</item>
+		<item>-250</item>
+		<item>-237</item>
+		<item>-225</item>
+		<item>-212</item>
+		<item>-200</item>
+		<item>-187</item>
+		<item>-175</item>
+		<item>-162</item>
+		<item>-150</item>
+		<item>-137</item>
+		<item>-125</item>
+		<item>-112</item>
+		<item>-100</item>
+		<item>-87</item>
+		<item>-75</item>
+		<item>-62</item>
+		<item>-50</item>
+		<item>-37</item>
+		<item>-25</item>
+		<item>-12</item>
+		<item>0</item>
+		<item>12</item>
+		<item>25</item>
+		<item>37</item>
+		<item>50</item>
+		<item>62</item>
+		<item>75</item>
+		<item>87</item>
+		<item>100</item>
+		<item>112</item>
+		<item>125</item>
+		<item>137</item>
+		<item>150</item>
+		<item>162</item>
+		<item>175</item>
+		<item>187</item>
+		<item>200</item>
+		<item>212</item>
+		<item>225</item>
+		<item>237</item>
+		<item>250</item>
+		<item>262</item>
+		<item>275</item>
+		<item>287</item>
+		<item>300</item>
+		<item>312</item>
+		<item>325</item>
+		<item>337</item>
+		<item>350</item>
+		<item>362</item>
+		<item>375</item>
+		<item>387</item>
+		<item>400</item>
+	</string-array>
+	
+	<string-array name="accuracyLevelValues">
+		<item>75</item>
+		<item>60</item>
+		<item>45</item>
+		<item>30</item>
+		<item>15</item>
+		<item>1</item>
+	</string-array>
+	
+	<string-array name="healthPenalty">
+		<item>-2 HP</item>
+		<item>-4 HP</item>
+		<item>-6 HP</item>
+		<item>-8 HP</item>
+		<item>-10 HP</item>
+	</string-array>
+	<string-array name="healthPenaltyValues">
+		<item>20</item>
+		<item>40</item>
+		<item>60</item>
+		<item>80</item>
+		<item>100</item>
+	</string-array>
+	
+	<string-array name="healthMax">
+		<item>50 HP</item>
+		<item>100 HP</item>
+		<item>200 HP</item>
+		<item>500 HP</item>
+		<item>9000+ HP</item>
+	</string-array>
+	<string-array name="healthMaxValues">
+		<item>500</item>
+		<item>1000</item>
+		<item>2000</item>
+		<item>5000</item>
+		<item>99999</item>
+	</string-array>
+	
+	<string-array name="appPriorityValues">
+		<item>0</item>
+		<item>-8</item>
+		<item>-16</item>
+		<item>-19</item>
+	</string-array>
+	
+	<string-array name="languages">
+		<item>Default</item>
+		<item>English</item>
+		<item>Deutsch</item>
+		<item>Español</item>
+		<item>Suomalainen</item>
+		<item>Français</item>
+		<item>Italiano</item>
+		<item>日本</item>
+		<item>한국어</item>
+		<item>Nederlands</item>
+		<item>Português</item>
+		<item>Português (BR)</item>
+		<item>Română</item>
+		<item>русский язык</item>
+		<item>中文[简体]</item>
+		<item>中文[繁體]</item>
+	</string-array>
+	<string-array name="languagesValues">
+		<item>default</item>
+		<item>en</item>
+		<item>de</item>
+		<item>es</item>
+		<item>fi</item>
+		<item>fr</item>
+		<item>it</item>
+		<item>ja</item>
+		<item>ko</item>
+		<item>nl</item>
+		<item>pt</item>
+		<item>pt-rBR</item>
+		<item>ro</item>
+		<item>ru</item>
+		<item>zh</item>
+		<item>zh-rTW</item>
+	</string-array>
+	
+</resources>

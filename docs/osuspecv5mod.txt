@@ -1,0 +1,93 @@
+osu file format v5
+//Version header.  This is used to determine some conditions which must be changed for older
+//osu! file formats.  In this document I will be looking at v5 only.
+
+[General]
+AudioFilename: 05 Calling.mp3
+	//The audio filename (mp3/ogg, restricted to beatmap directory).
+AudioHash:
+	//???
+AudioLeadIn: 0
+	//The number of ms to allow before mp3 starts.  Basically starts the internal time counter at a negative position.
+PreviewTime: -1
+	//The position in the song (ms) to play the song selection preview from.
+Countdown: 1
+	//Type of countdown {Disabled = 0, Normal = 1, HalfSpeed = 2, DoubleSpeed = 3}
+SampleSet: Normal
+	//Audio sampleset name.  Either Normal or Soft at the moment.  This is the map default and is overridden by TimingPoints.
+EditorBookmarks: 4106,66876,81646,125955,140725
+	//Locations in the song that editor bookmarks have been placed (ms).
+Mode:
+	//???
+EditorBookmarks:
+	//???
+
+[Metadata]
+Title:Calling
+	//Song Title (spec max 80chars)
+Artist:Leah
+	//Song Artist (spec max 80chars)
+Creator:awp
+	//Song Creator, always forum username in case of bss submission. (spec max 80chars)
+Version:Hard
+	//Custom version name.  Defaults to easy,normal,hard,insane but can be customised. (spec max 80chars)
+Source:The World Ends with You
+	//Song Source, used for searching and will be displayed. (spec max 80chars)
+Tags:game twewy
+	//Tags, used for searching. (spec max 80chars)
+
+[Difficulty]
+HPDrainRate:6
+	//The level of HP drain, 0 (easy) to 10 (hard).
+	//NB: The calculation for HP drain is quite complex - contact me when you need the specifics.
+CircleSize:6
+	//Size of hitobjects.  Assuming a gamefield of 512x384, 64 * (1 - 0.7*((CircleSize-5)/5))
+OverallDifficulty:6
+	//Affects timing window, spinner difficulty and approach speeds.
+SliderMultiplier:1.7
+	//Speed of slider movement, where 1.0 is 100pixels per beatLength.
+SliderTickRate:2
+	//How often slider ticks are placed, where 1 is "1 tick per beat" etc.
+
+[Events]
+	//See http://osu.ppy.sh/forum/viewtopic.php?f=20&t=1869 for now.
+
+[TimingPoints]
+4056,461.551275,4,1,1,100
+	//offsetMs,beatLength,timingSignature,sampleSetId,useCustomSamples,sampleVolume
+	//offsetMs   - the offset in milliseconds for this section
+	//beatLength - length of a single beat in milliseconds (double accuracy)
+	//timingSignature - 3 = simple triple, 4 = simple quadruple.  Used in editor.
+	//sampleSetId - timing point specific samples {None = 0, Normal = 1, Soft = 2}
+	//useCustomSamples - use skin localised samples? {No = 0, Yes = 1}
+	//sampleVolume - volume of the samples
+	//timingChange - is there a timing change (beatLength)? {No = 0, Yes = 1}
+	//kiaiTimeActive - is kiai time active? {No = 0, Yes = 1}
+[Colours]
+Combo1 : 209,209,209
+	//RGB values
+Combo2 : 61,27,222
+Combo3 : 63,63,63
+Combo4 : 234,119,15
+	//Up to five entries for combo colours.  When not present, default four colours are used (see skintemplate).
+
+[HitObjects]
+	//HitObjectSoundType {Normal = 0, Whistle = 2, Finish = 4, WhistleFinish = 6, Clap = 8}
+	// For a hit circle: x,y,startTime,objectType,soundType
+	// For a slider: x,y,startTime,objectType,soundType,curveType|x1,y1|x2,y2|...xn,yn,repeatCount,pixelLength
+	// For a spinner: x,y,startTime,objectType,soundType,endTime
+
+	//Bitwise flag enums:
+	//HitObjectType {Normal = 1, Slider = 2, NewCombo = 4, NormalNewCombo = 5, SliderNewCombo = 6, Spinner = 8}
+	//HitObjectSoundType {Normal = 0, Whistle = 2, Finish = 4, WhistleFinish = 6}
+	
+	//SliderCurveType { C = Catmull, B = Bezier, L = Linear }
+	//See http://up.ppy.sh/files/sliderstuff.cs and http://pe.ppy.sh/bezier.cs for curve creation specifics.
+	//Post if you need more slider creation help.
+
+128,192,4056,1,0
+	//HitCircle: xPos,yPos,startTimeMs,objectType,soundType
+256,192,7748,6,2,B|256:96|384:96,1,170
+	//Slider: xPos,yPos,startTimeMs,objectType,soundType,curveType|x1,y1|x2,y2|...|xn,yn,repeatCount,sliderLengthPixels
+256,192,199292,12,0,202523
+	//Spinner: xPos(redundant),yPod(redundant),startTimeMs,objectType,soundType,endTimeMs

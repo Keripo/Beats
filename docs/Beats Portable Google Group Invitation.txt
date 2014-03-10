@@ -1,0 +1,5 @@
+Hello, you are invited to the newly created, official Google group for "Beats, Advanced Rhythm Game" <http://beatsportable.com>. Subscribe to help test out the very latest SVN builds of Beats or help with translating Beats to other languages. Developers and experienced players are also welcome for general discussion.
+
+You are invited because you either expressed interest in the development of the app, translating the app, or testing the app. If you were sent this invitation by error (or would not like to be involved), feel free to ignore this message.
+
+~Keripo (Philip Peng)

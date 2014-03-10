@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- App -->
+	<string name="App_name">"Beats"</string>
+	<string name="Titlebar">"Beats - "</string>
+	<string name="Localytics_key">"7e17c9425cf4aec59bccf6f-8039babc-3418-11e0-c2c6-007af5bd88a0"</string>
+	<string name="AdMob_key">"a14cb42f9400bc9"</string>
+	
+	<!-- URLs -->
+	<string name="Url_website">"http://beatsportable.com"</string>
+	<string name="Url_forums">"http://beatsportable.com/forum/"</string>
+	<string name="Url_updates">"http://beatsportable.com/updates/"</string>
+	<string name="Url_tutorial">"http://beatsportable.com/tutorial/"</string>
+	<string name="Url_demo">"http://beatsportable.com/demo/"</string>
+	<string name="Url_todo">"http://beatsportable.com/todo/"</string>
+	<string name="Url_changelog">"http://beatsportable.com/changelog/"</string>
+	<string name="Url_downloads">"http://beatsportable.com/download-songs/"</string>
+	<string name="Url_donate">"http://beatsportable.com/donate/"</string>
+	<string name="Url_version">"http://beatsportable.com/static/releases/version.txt"</string>
+	
+	<!-- Letter Scores -->
+	<string name="Letter_E">"E"</string>
+	<string name="Letter_D">"D"</string>
+	<string name="Letter_C">"C"</string>
+	<string name="Letter_B">"B"</string>
+	<string name="Letter_A">"A"</string>
+	<string name="Letter_AA">"AA"</string>
+	<string name="Letter_AAA">"AAA"</string>
+	<string name="Letter_unknown">"\?\?\?"</string>
+	
+	<!-- Tools -->
+	<string name="Tools_path_beats">"/Beats"</string>
+	<string name="Tools_path_songs">"/Songs"</string>
+	<string name="Tools_path_osu">"/osu!"</string>
+	<string name="Tools_path_singles">"/Singles"</string>
+	<string name="Tools_path_screenshots">"/Screenshots"</string>
+	<string name="Tools_path_backgrounds">"/Backgrounds"</string>
+	<string name="Tools_path_noteskins">"/NoteSkins"</string>
+	<string name="Tools_path_nomedia">"/.nomedia"</string>
+	<string name="Tools_path_version">"/version.txt"</string>
+	<string name="Tools_graphics_zip">"Beats 1.7x Graphics.zip"</string>
+	<string name="Tools_sample_zip">"Lisek's Stepfiles (Beats Sample Songs).zip"</string>
+	
+	<!-- Data Settings -->
+	<string name="smFilePath">"smFilePath"</string>
+	<string name="smFilePathDefault">""</string>
+	<string name="lastDir">"lastDir"</string>
+	<string name="lastDirDefault">""</string>
+	
+	<!-- Tweakable Settings -->
+	<string name="difficultyLevel">"difficultyLevel"</string>
+	<string name="difficultyLevelDefault">"2"</string>
+	<string name="speedMultiplier">"speedMultiplier"</string>
+	<string name="speedMultiplierDefault">"2"</string>
+	<string name="autoStart">"autoStart"</string>
+	<string name="autoStartDefault">"1"</string>
+	<string name="noteAppearance">"noteAppearance"</string>
+	<string name="noteAppearanceDefault">"0"</string>
+	<string name="dark">"dark"</string>
+	<string name="darkDefault">"0"</string>
+	<string name="holds">"holds"</string>
+	<string name="holdsDefault">"1"</string>
+	<string name="jumps">"jumps"</string>
+	<string name="jumpsDefault">"0"</string>
+	<string name="randomize">"randomize"</string>
+	<string name="randomizeDefault">"0"</string>
+	<string name="accuracyLevel">"accuracyLevel"</string>
+	<string name="accuracyLevelDefault">"45"</string>
+	<string name="autoPlay">"autoPlay"</string>
+	<string name="autoPlayDefault">"0"</string>
+	<string name="gameMode">"gameMode"</string>
+	<string name="gameModeDefault">"0"</string>
+	<string name="fullscreen">"fullscreen"</string>
+	<string name="fullscreenDefault">"0"</string>
+	<string name="backgroundShow">"backgroundShow"</string>
+	<string name="backgroundShowDefault">"1"</string>
+	<string name="backgroundFiltering">"backgroundFiltering"</string>
+	<string name="backgroundFilteringDefault">"0"</string>
+	<string name="backgroundSong">"backgroundSong"</string>
+	<string name="backgroundSongDefault">"1"</string>
+	<string name="backgroundBrightness">"backgroundBrightness"</string>
+	<string name="backgroundBrightnessDefault">"75"</string>
+	<string name="noteskin">"noteskin"</string>
+	<string name="noteskinDefault">"default"</string>
+	<string name="backgroundImage">"backgroundImage"</string>
+	<string name="backgroundImageDefault">"blue"</string>
+	<string name="orientation">"orientation"</string>
+	<string name="orientationDefault">"2"</string>
+	<string name="tapboxLayout">"tapboxLayout"</string>
+	<string name="tapboxLayoutDefault">"standard"</string>
+	<string name="tapboxFading">"tapboxFading"</string>
+	<string name="tapboxFadingDefault">"50"</string>
+	<string name="tapboxOverlap">"tapboxOverlap"</string>
+	<string name="tapboxOverlapDefault">"0.1"</string>
+	<string name="tapboxYOffset">"tapboxYOffset"</string>
+	<string name="tapboxYOffsetDefault">"0"</string>
+	<string name="vibrateTap">"vibrateTap"</string>
+	<string name="vibrateTapDefault">"1"</string>
+	<string name="vibrateHold">"vibrateHold"</string>
+	<string name="vibrateHoldDefault">"1"</string>
+	<string name="vibrateMiss">"vibrateMiss"</string>
+	<string name="vibrateMissDefault">"1"</string>
+	<string name="vibrateTouchSense">"vibrateTouchSense"</string>
+	<string name="vibrateTouchSenseDefault">"1"</string>
+	<string name="manualOffset">"manualOffset"</string>
+	<string name="manualOffsetDefault">"0"</string>
+	<string name="manualOGGOffset">"manualOGGOffset"</string>
+	<string name="manualOGGOffsetDefault">"0"</string>
+	<string name="showPercent">"showPercent"</string>
+	<string name="showPercentDefault">"0"</string>
+	<!-- 
+	<string name="fps">"fps"</string>
+	<string name="fpsDefault">"1"</string>
+	-->
+	<string name="showFPS">"showFPS"</string>
+	<string name="showFPSDefault">"1"</string>
+	<string name="screenshotMode">"screenshotMode"</string>
+	<string name="screenshotModeDefault">"0"</string>
+	<string name="syncDuration">"syncDuration"</string>
+	<string name="syncDurationDefault">"1024"</string>
+	<string name="appPriority">"appPriority"</string>
+	<string name="appPriorityDefault">"-16"</string>
+	<string name="healthPenalty">"healthPenalty"</string>
+	<string name="healthPenaltyDefault">"40"</string>
+	<string name="healthMax">"healthMax"</string>
+	<string name="healthMaxDefault">"2000"</string>
+	<string name="additionalVibrations">"additionalVibrations"</string>
+	<string name="additionalVibrationsDefault">"1"</string>
+	<string name="useShortDirNames">"useShortDirNames"</string>
+	<string name="useShortDirNamesDefault">"1"</string>
+	<string name="stepfileFolderCheck">"stepfileFolderCheck"</string>
+	<string name="stepfileFolderCheckDefault">"1"</string>
+	<string name="language">"language"</string>
+	<string name="languageDefault">"default"</string>
+	<!-- <string name="betaNotes">"betaNotes"</string> -->
+	<string name="betaNotesDefault">"1"</string>
+	<string name="debugTime">"debugTime"</string>
+	<string name="debugTimeDefault">"0"</string>
+	<string name="debugLogCat">"debugLogCat"</string>
+	<string name="debugLogCatDefault">"0"</string>
+	<string name="debugTapbox">"debugTapbox"</string>
+	<string name="debugTapboxDefault">"0"</string>
+	<string name="installSamples">"installSamples"</string>
+	<string name="installSamplesDefault">"1"</string>
+	<string name="resetSettings">"resetSettings"</string>
+	<string name="resetSettingsDefault">"1"</string>
+	<string name="resetHighScores">"resetScores"</string>
+	<string name="resetHighScoresDefault">"0"</string>
+	<string name="updateCheck">"0"</string>
+	<string name="updateCheckDefault">"0"</string>
+	
+	<!-- Ignore Settings -->
+	<string name="ignoreUnzipSizeWarning">"ignoreUnzipSizeWarning"</string>
+	<string name="ignoreUnzipSizeWarningDefault">"0"</string>
+	<string name="ignoreOGGWarning">"ignoreOGGWarning"</string>
+	<string name="ignoreOGGWarningDefault">"0"</string>
+	<string name="ignoreOSUWarning">"ignoreOSUWarning"</string>
+	<string name="ignoreOSUWarningDefault">"0"</string>
+	<string name="ignoreDifficultyWarning">"ignoreDifficultyWarning"</string>
+	<string name="ignoreDifficultyWarningDefault">"0"</string>
+	<string name="ignoreTabletBackgroundWarning">"ignoreTabletBackgroundWarning"</string>
+	<string name="ignoreTabletBackgroundWarningDefault">"0"</string>
+	<string name="ignoreLegacyWarning">"ignoreLegacyWarning"</string>
+	<string name="ignoreLegacyWarningDefault">"0"</string>
+	<string name="ignoreSyncWarning">"ignoreSyncWarning"</string>
+	<string name="ignoreSyncWarningDefault">"0"</string>
+	<string name="ignoreNewUserNotes">"ignoreNewUserNotes"</string>
+	<string name="ignoreNewUserNotesDefault">"0"</string>
+	<string name="ignoreBetaNotes">"ignoreBetaNotes"</string>
+	<string name="ignoreBetaNotesDefault">"0"</string>
+	
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="vertical" 
+	    android:scrollbarAlwaysDrawVerticalTrack="true">
+		<TextView
+			android:id="@+id/notes_text"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:paddingLeft="10sp"
+			android:paddingRight="5sp"
+			/>
+		<CheckBox
+			android:id="@+id/checkbox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/Tools_do_not_show_again"
+			/>
+	</LinearLayout>
+</ScrollView>
+

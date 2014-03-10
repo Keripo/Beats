@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.beatsportable.beats"
+	android:versionCode="18"
+	android:versionName="@string/App_version"
+	android:installLocation="auto">
+	<uses-sdk
+		android:minSdkVersion="4"
+		android:targetSdkVersion="16"
+	/>
+	<uses-permission android:name="android.permission.INTERNET"/> <!-- AdMob Localytics -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- AdMob -->
+	<uses-permission android:name="android.permission.VIBRATE"/> <!-- Game -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- Updates -->
+	<application
+		android:enabled="true"
+		android:icon="@drawable/icon"
+		android:label="@string/App_name"
+		android:description="@string/App_description">
+		<activity
+			android:name=".MenuHome"
+			android:configChanges="orientation|keyboardHidden">
+			<!-- android:configChanges="locale|orientation|keyboardHidden"-->
+			<intent-filter>
+				<action	android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".ToolsDownloader"
+			android:configChanges="orientation|keyboardHidden">
+			<!--
+				Most websites report .smzip files as of MIME type application/octet-stream
+				so the only real way to handle them would be to directly download the files
+				within Beats, then proceed to installing them.
+			 -->
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+					<data
+						android:scheme="http"
+						android:host="*"
+						android:pathPattern=".*\\.smzip"
+					/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".ToolsUnzipperActivity"
+			android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data
+					android:mimeType="application/zip"
+				/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data
+					android:mimeType="application/octet-stream"
+				/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data
+					android:mimeType="application/download"
+				/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data
+					android:mimeType="*/*"
+					android:scheme="file"
+					android:host="*"
+					android:pathPattern=".*\\.smzip"
+				/>
+				<data
+					android:mimeType="*/*"
+					android:scheme="file"
+					android:host="*"
+					android:pathPattern=".*\\.zip"
+				/>
+				<data
+					android:mimeType="*/*"
+					android:scheme="file"
+					android:host="*"
+					android:pathPattern=".*\\.osz"
+				/>
+				<data
+					android:mimeType="*/*"
+					android:scheme="file"
+					android:host="*"
+					android:pathPattern=".*\\.bin"
+				/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".MenuCredits">
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+				<action android:name=".MenuCredits" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".MenuFileChooser"
+			android:configChanges="orientation|keyboardHidden"/>
+		<activity android:name=".MenuSettings"/>
+		<activity
+			android:name=".GUIGame"
+			android:theme="@style/Theme.NoBackground"
+			android:configChanges="orientation|keyboardHidden"
+			/>
+				 
+		<!-- AdMob -->
+		<activity
+			android:name="com.google.ads.AdActivity"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+		/>
+	</application>
+</manifest>
