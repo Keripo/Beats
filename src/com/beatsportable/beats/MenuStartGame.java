@@ -208,7 +208,12 @@ public class MenuStartGame implements Runnable {
 			if (!dp.hasNext()) {
 				throw new Exception(Tools.getString(R.string.MenuStartGame_notes_error));
 			}
-			if (dp.df.getMusic() == null || dp.df.getMusic().getPath() == null || !dp.df.getMusic().exists()) {
+			if (dp.df.getMusic() == null ||
+				dp.df.getMusic().getPath() == null ||
+				dp.df.getMusic().getPath().length() == 0 ||
+				!dp.df.getMusic().exists() ||
+				!dp.df.getMusic().canRead()
+				) {
 				throw new Exception(Tools.getString(R.string.MenuStartGame_music_error));
 			}
 			handler.sendEmptyMessage(0); // Done parsing
