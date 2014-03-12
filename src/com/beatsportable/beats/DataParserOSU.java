@@ -256,6 +256,7 @@ public class DataParserOSU {
 									y2 = y3;
 								}
 							}
+							coordsScanner.close();
 							float endCoords[] = new float[4];
 							endCoords[0] = x2;
 							endCoords[1] = y2;
@@ -520,6 +521,7 @@ public class DataParserOSU {
 								df.addBPM(beat, value);
 								//lastValue = value;
 							}
+							tsc.close();
 						}
 					}
 					sc.close();

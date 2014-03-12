@@ -1,6 +1,6 @@
 //@formatter:off
 /**
- * DatapointHelper.java Copyright (C) 2012 Char Software Inc., DBA Localytics. This code is provided under the Localytics Modified
+ * DatapointHelper.java Copyright (C) 2013 Char Software Inc., DBA Localytics. This code is provided under the Localytics Modified
  * BSD License. A copy of this license has been distributed in a file called LICENSE with this source code. Please visit
  * www.localytics.com for more information.
  */
@@ -9,10 +9,14 @@
 package com.localytics.android;
 
 import android.Manifest.permission;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -120,6 +124,19 @@ import java.security.NoSuchAlgorithmException;
      */
     public static String getAndroidIdHashOrNull(final Context context)
     {
+    	String androidId = getAndroidIdOrNull(context);
+    	
+    	return (androidId == null) ? null : getSha256_buggy(androidId);
+    }
+    
+    /**
+     * Gets the device's Android ID.
+     *
+     * @param context The context used to access the settings resolver
+     * @return The Android ID. May return null if Android ID is not available.
+     */
+    public static String getAndroidIdOrNull(final Context context)
+    {
         // Make sure a legacy version of the SDK didn't leave behind a device ID.
         // If it did, this ID must be used to keep user counts accurate
         final File fp = new File(context.getFilesDir() + LEGACY_DEVICE_ID_FILE);
@@ -168,7 +185,7 @@ import java.security.NoSuchAlgorithmException;
             return null;
         }
 
-        return getSha256_buggy(androidId);
+        return androidId;
     }
 
     /**
@@ -259,30 +276,6 @@ import java.security.NoSuchAlgorithmException;
         }
 
         return id;
-    }
-
-    /**
-     * Gets a 1-way hashed value of the device's IMEI/MEID ID. This value is encoded using a SHA-256 one way hash and cannot be
-     * used to determine what device this data came from.
-     * <p>
-     * Note: this method will return null if this is a non-telephony device.
-     * <p>
-     * Note: this method will return null if {@link permission#READ_PHONE_STATE} is not available.
-     *
-     * @param context The context used to access the phone state.
-     * @return An 1-way hashed version of the {@link TelephonyManager#getDeviceId()}. Null if an ID or the hashing algorithm is
-     *         not available, or if {@link permission#READ_PHONE_STATE} is not available.
-     */
-    public static String getTelephonyDeviceIdHashOrNull(final Context context)
-    {
-        final String id = getTelephonyDeviceIdOrNull(context);
-
-        if (null == id)
-        {
-            return null;
-        }
-
-        return getSha256_buggy(id);
     }
 
     /**
@@ -416,6 +409,49 @@ import java.security.NoSuchAlgorithmException;
         return mfg;
     }
 
+
+    /**
+     * Retrieve the Facebook attribution cookie at installation time
+     *
+     * @return Facebook attribution cookie or null if unavailable
+     */
+    public static String getFBAttribution(final Context context)
+    {
+        String facebookAttribution = null;
+
+        final ContentResolver contentResolver = context.getContentResolver();
+        final Uri uri = Uri.parse("content://com.facebook.katana.provider.AttributionIdProvider"); //$NON-NLS-1$
+        final String columnName = "aid"; //$NON-NLS-1$
+        final String[] projection =
+            { columnName };
+        Cursor cursor = null;
+        try
+        {
+            cursor = contentResolver.query(uri, projection, null, null, null);
+            if (null != cursor && cursor.moveToFirst())
+            {
+                facebookAttribution = cursor.getString(cursor.getColumnIndex(columnName));
+            }
+        }
+        catch (final Exception e)
+        {
+            if (Constants.IS_LOGGABLE)
+            {
+                Log.w(Constants.LOG_TAG, "Error reading FB attribution", e); //$NON-NLS-1$
+            }
+        }
+        finally
+        {
+            if (null != cursor)
+            {
+                cursor.close();
+                cursor = null;
+            }
+        }
+
+        return facebookAttribution;
+    }
+    
     /**
      * Gets the versionName of the application.
      *
@@ -452,6 +488,57 @@ import java.security.NoSuchAlgorithmException;
              */
             throw new RuntimeException(e);
         }
+    }
+    
+    public static String getLocalyticsAppKeyOrNull(final Context context)
+    {
+    	String appKey = null;
+    	
+        try
+        {
+        	ApplicationInfo applicationInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
+			Object metaData = applicationInfo.metaData.get(Constants.LOCALYTICS_METADATA_APP_KEY);
+			if (metaData instanceof String)
+			{
+				appKey = (String)metaData;
+			}
+		}
+        catch (final PackageManager.NameNotFoundException e)
+        {
+            /*
+             * This should never occur--our own package must exist for this code to be running
+             */
+            throw new RuntimeException(e);
+        }
+        
+        return appKey;
+    }
+    
+    public static String getLocalyticsRollupKeyOrNull(final Context context)
+    {
+    	String rollupKey = null;
+    	
+        try
+        {
+        	ApplicationInfo applicationInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
+        	if (applicationInfo.metaData != null)
+        	{
+        		Object metaData = (String)applicationInfo.metaData.get(Constants.LOCALYTICS_METADATA_ROLLUP_KEY);
+				if (metaData instanceof String)
+				{
+					rollupKey = (String)metaData;
+				}
+        	}
+		}
+        catch (final PackageManager.NameNotFoundException e)
+        {
+            /*
+             * This should never occur--our own package must exist for this code to be running
+             */
+            throw new RuntimeException(e);
+        }
+        
+        return rollupKey;
     }
 
     /**

@@ -1,7 +1,7 @@
 /*
 ** =======================================================================
-** Copyright (c) 2012  Immersion Corporation.  All rights reserved.
-**                     Immersion Corporation Confidential and Proprietary.
+** Copyright (c) 2012-2013  Immersion Corporation.  All rights reserved.
+**                          Immersion Corporation Confidential and Proprietary.
 ** =======================================================================
 */
 
@@ -1688,6 +1688,108 @@ IMMVIBEAPI VibeStatus ImmVibePlayIVTEffectRepeat
 );
 
 /**
+\brief  Plays an interpolated effect defined in IVT data.
+
+\sync
+
+\param[in]      hDeviceHandle
+                            Device handle on which to play the effect. The
+                            handle must have been obtained by calling
+                            #ImmVibeOpenDevice or #ImmVibeOpenCompositeDevice.
+\param[in]      pIVT        Pointer to IVT data. See \ref ivtfiles for details
+                            about IVT data. Use #g_pVibeIVTBuiltInEffects to
+                            access built-in IVT effects.
+\param[in]      nEffectIndex
+                            Index of the effect. The index of the effect must be
+                            greater than or equal to \c 0 and less than the
+                            number of effects returned by
+                            #ImmVibeGetIVTEffectCount.
+\param[in]      nInterpolant
+                            Initial interpolant value for the interpolated effect.
+                            The interpolant value must be greater than or equal to \c 0 and
+                            less than or equal to #VIBE_MAX_INTERPOLANT.
+                            The interpolant value may be subsequently modified by calling
+                            #ImmVibeModifyPlayingInterpolatedEffectInterpolant.
+\param[out]     phEffectHandle
+                            Pointer to the variable that will receive a handle
+                            to the playing effect.
+
+\retval VIBE_S_SUCCESS      No error.
+\retval VIBE_W_INSUFFICIENT_PRIORITY
+                            The device handle does not have enough priority to
+                            play the effect. Another effect is currently playing
+                            on another higher priority device handle. Before
+                            playing the effect, you must call
+                            #ImmVibeStopPlayingEffect or
+                            #ImmVibeStopAllPlayingEffects to stop currently
+                            playing effects, or call
+                            #ImmVibeSetDevicePropertyInt32 to increase value of
+                            the #VIBE_DEVPROPTYPE_PRIORITY property.
+\retval  VIBE_W_EFFECTS_DISABLED
+                            Effects playing on the device handle have been
+                            disabled. Call #ImmVibeSetDevicePropertyInt32 to set
+                            the #VIBE_DEVPROPTYPE_DISABLE_EFFECTS property to
+                            false to re-enable playing effects on the device
+                            handle.
+\retval VIBE_E_NOT_INITIALIZED
+                           The \api has not been initialized. #ImmVibeInitialize
+                           was not called or returned an error.
+\retval VIBE_E_INVALID_ARGUMENT
+                            One or more of the arguments are invalid. For
+                            example:
+                            -   The \a hDeviceHandle parameter specifies an
+                                invalid device.
+                            -   The \a pIVT parameter is \c NULL or points to
+                                invalid IVT data.
+                            -   The value of the \a nEffectIndex parameter is
+                                negative.
+                            -   The value of the \a nEffectIndex parameter is
+                                greater than or equal to the number of effects
+                                returned by #ImmVibeGetIVTEffectCount.
+                            -   The \a phEffectHandle parameter is \c NULL.
+                            -   The value of the \a nInterpolant parameter is negative.
+                            -   The value of the \a nInterpolant parameter is greater than
+                                #VIBE_MAX_INTERPOLANT.
+\retval VIBE_E_INCOMPATIBLE_EFFECT_TYPE
+                            The effect specified by the \a hEffectHandle
+                            parameter is not an interpolated effect.
+\retval VIBE_E_FAIL         Error playing the effect.
+\retval VIBE_E_DEVICE_NEEDS_LICENSE
+                            Access to the device is locked until a valid license
+                            key is provided. This error may be returned
+                            only by \api version 3.2 or lower. Subsequent
+                            versions of the \apibrief do not require a license
+                            key. See \ref licensing for details about setting
+                            license keys.
+\retval VIBE_E_NOT_ENOUGH_MEMORY
+                            The function cannot allocate memory to complete the
+                            request. This happens if the device runs low in
+                            memory.
+\retval VIBE_E_SERVICE_BUSY The \service is busy and could not complete the
+                            requested function call.
+\retval VIBE_E_NOT_SUPPORTED
+                            This function is only supported in the \api &ndash;
+                            5000 Series. See \ref editions for details about
+                            \apibrief editions.
+\if limo
+                            The \service is not available on the target device.
+\endif
+
+\externappclients
+
+\since  Version 3.6. See \ref versioning for details about \api version numbers.
+*/
+
+IMMVIBEAPI VibeStatus ImmVibePlayIVTInterpolatedEffect
+(
+    VibeInt32 hDeviceHandle,
+    const VibeUInt8 *pIVT,
+    VibeInt32 nEffectIndex,
+    VibeInt32 nInterpolant,
+    VibeInt32 *phEffectHandle
+);
+
+/**
 \brief  Stops a playing effect.
 
 \sync
@@ -2234,6 +2336,107 @@ IMMVIBEAPI VibeStatus ImmVibeAppendWaveformEffect
     VibeInt32 *phEffectHandle
 );
 
+/**
+\brief  Plays an interpolated effect defined in IVT data.
+
+\sync
+
+\param[in]      hDeviceHandle
+                            Device handle on which to play the effect. The
+                            handle must have been obtained by calling
+                            #ImmVibeOpenDevice or #ImmVibeOpenCompositeDevice.
+\param[in]      pIVT        Pointer to IVT data. See \ref ivtfiles for details
+                            about IVT data. Use #g_pVibeIVTBuiltInEffects to
+                            access built-in IVT effects.
+\param[in]      nEffectIndex
+                            Index of the effect. The index of the effect must be
+                            greater than or equal to \c 0 and less than the
+                            number of effects returned by
+                            #ImmVibeGetIVTEffectCount.
+\param[in]      nInterpolant
+                            Initial interpolant value for the interpolated effect.
+                            The interpolant value must be greater than or equal to \c 0 and
+                            less than or equal to #VIBE_MAX_INTERPOLANT.
+                            The interpolant value may be subsequently modified by calling
+                            #ImmVibeModifyPlayingInterpolatedEffectInterpolant.
+\param[out]     phEffectHandle
+                            Pointer to the variable that will receive a handle
+                            to the playing effect.
+
+\retval VIBE_S_SUCCESS      No error.
+\retval VIBE_W_INSUFFICIENT_PRIORITY
+                            The device handle does not have enough priority to
+                            play the effect. Another effect is currently playing
+                            on another higher priority device handle. Before
+                            playing the effect, you must call
+                            #ImmVibeStopPlayingEffect or
+                            #ImmVibeStopAllPlayingEffects to stop currently
+                            playing effects, or call
+                            #ImmVibeSetDevicePropertyInt32 to increase value of
+                            the #VIBE_DEVPROPTYPE_PRIORITY property.
+\retval  VIBE_W_EFFECTS_DISABLED
+                            Effects playing on the device handle have been
+                            disabled. Call #ImmVibeSetDevicePropertyInt32 to set
+                            the #VIBE_DEVPROPTYPE_DISABLE_EFFECTS property to
+                            false to re-enable playing effects on the device
+                            handle.
+\retval VIBE_E_NOT_INITIALIZED
+                           The \api has not been initialized. #ImmVibeInitialize
+                           was not called or returned an error.
+\retval VIBE_E_INVALID_ARGUMENT
+                            One or more of the arguments are invalid. For
+                            example:
+                            -   The \a hDeviceHandle parameter specifies an
+                                invalid device.
+                            -   The \a pIVT parameter is \c NULL or points to
+                                invalid IVT data.
+                            -   The value of the \a nEffectIndex parameter is
+                                negative.
+                            -   The value of the \a nEffectIndex parameter is
+                                greater than or equal to the number of effects
+                                returned by #ImmVibeGetIVTEffectCount.
+                            -   The \a phEffectHandle parameter is \c NULL.
+                            -   The value of the \a nInterpolant parameter is negative.
+                            -   The value of the \a nInterpolant parameter is greater than
+                                #VIBE_MAX_INTERPOLANT.
+\retval VIBE_E_INCOMPATIBLE_EFFECT_TYPE
+                            The effect specified by the \a hEffectHandle
+                            parameter is not an interpolated effect.
+\retval VIBE_E_FAIL         Error playing the effect.
+\retval VIBE_E_DEVICE_NEEDS_LICENSE
+                            Access to the device is locked until a valid license
+                            key is provided. This error may be returned
+                            only by \api version 3.2 or lower. Subsequent
+                            versions of the \apibrief do not require a license
+                            key. See \ref licensing for details about setting
+                            license keys.
+\retval VIBE_E_NOT_ENOUGH_MEMORY
+                            The function cannot allocate memory to complete the
+                            request. This happens if the device runs low in
+                            memory.
+\retval VIBE_E_SERVICE_BUSY The \service is busy and could not complete the
+                            requested function call.
+\retval VIBE_E_NOT_SUPPORTED
+                            This function is only supported in the \api &ndash;
+                            5000 Series. See \ref editions for details about
+                            \apibrief editions.
+\if limo
+                            The \service is not available on the target device.
+\endif
+
+\externappclients
+
+\since  Version 3.6. See \ref versioning for details about \api version numbers.
+*/
+
+IMMVIBEAPI VibeStatus ImmVibePlayIVTInterpolatedEffect
+(
+    VibeInt32 hDeviceHandle,
+    const VibeUInt8 *pIVT,
+    VibeInt32 nEffectIndex,
+    VibeInt32 nInterpolant,
+    VibeInt32 *phEffectHandle
+);
 /**
 \brief  Modifies a playing MagSweep effect.
 

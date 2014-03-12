@@ -81,6 +81,7 @@ public class ToolsUpdateTask extends AsyncTask<String, Void, Boolean> {
 			newVersionNumber = Integer.parseInt(sc.nextLine().trim());
 			newVersionName = sc.nextLine().trim();
 			downloadURL = sc.nextLine().trim();
+			sc.close();
 			
 			// Tell user to update if different version numbers
 			return (currentVersionNumber != newVersionNumber);

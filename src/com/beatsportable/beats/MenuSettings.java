@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.preference.*;
 	
 public class MenuSettings extends PreferenceActivity {
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

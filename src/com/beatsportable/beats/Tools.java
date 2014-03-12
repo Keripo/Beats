@@ -99,6 +99,7 @@ public class Tools {
 
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void setScreenDimensions() {
 		Display display = c.getWindow().getWindowManager().getDefaultDisplay();
 		screen_w = display.getWidth();

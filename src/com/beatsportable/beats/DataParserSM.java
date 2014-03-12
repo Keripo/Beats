@@ -308,6 +308,7 @@ public class DataParserSM {
 					}
 					
 					if (line.length() != nd.getNotesType().getNotesCount()) {
+						msc.close();
 						throw new DataParserException(
 								"line length " +
 								line.length() +
@@ -334,16 +335,18 @@ public class DataParserSM {
 					lineIndex++;
 					beat += 4.0 / (float)lineCount;
 				}
+				msc.close();
 				time += timeIncrease;
 			}
 		} catch (Exception e) {
-			nsc.close();
 			throw new DataParserException(
 					e.getClass().getSimpleName(),
 					e.getMessage() +
 					" for line " +
 					line, e
 					);
+		} finally {
+			nsc.close();
 		}
 	}
 	
@@ -375,6 +378,7 @@ public class DataParserSM {
 			// Because only 4-keys (dance-single) is currently supported
 			// TODO - add a note reduction system maybe that can reduce more than 4-keys to 4-keys? 
 			if (!nd.getNotesType().equals(NotesType.DANCE_SINGLE)) {
+				ndsc.close();
 				return;
 			}
 			

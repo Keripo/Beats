@@ -23,6 +23,7 @@ public class GUIListenersMulti extends GUIListeners {
 				
 				// Normal multi-touch
 				int actionmask = e.getAction() & MotionEvent.ACTION_MASK;
+				@SuppressWarnings("deprecation")
 				int actionpid = e.getAction() >> MotionEvent.ACTION_POINTER_ID_SHIFT;
 				switch (actionmask) {
 				case MotionEvent.ACTION_DOWN:
