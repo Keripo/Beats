@@ -2,7 +2,7 @@
 <resources>
 
 <!-- Placed here for easy updating -->
-<string name="App_version">"1.7.2b FINAL"</string>
+<string name="App_version">"1.7.3b FINAL"</string>
 
 <!-- MenuHome -->
 <string name="MenuHome_new_user_notes">
@@ -36,16 +36,17 @@ Enjoy the beta release!
 "
 </string>
 <string name="MenuHome_release_notes">
-"This is the FINAL version of Beats. Future development will continue with the open source \"Beats 2\" project. See http://code.google.com/p/beats2/ for more details.
+"This is the FINAL version of Beats.
+The open source code can be found at https://github.com/Keripo/Beats
+Future development will continue with the open source \"Beats2\" project.
+See http://beatsportable.com for the latest updates.
 
-Beats 1.7.2b FINAL - Changeset [r17]
-- Android 4.x ICS support (tested on CyanogenMod 10 nightly)
-- all speed multipliers effectiveness DOUBLED, please adjust your settings!
-- fixed Graphics zip delete error
-- updated AdMob to v6.2.1
-- updated Immersion MOTIV Haptic Effects to v3.5.39.3
-- updated Localytics
-- updated all translation
+Beats 1.7.3b FINAL - Changeset [e2d68fe]
+- all source code now hosted on GitHub
+- build against Android 4.4 (API 19)
+- fixed crash when #MUSIC is empty 
+- updated fi, pt, pt-rBR translations, added tr translation
+- updated libraries to UHL v3.7.43.0, AdMob v6.2.1, and Localytics 2.17.0
 
 ~Keripo
 
