@@ -97,7 +97,7 @@
   <string name="manualOGGOffsetTitle">"Décalage temporel des OGG"</string>
   <string name="manualOGGOffsetDesc">"Ajustez ceci manuellement si la synchronisation des musique .ogg est décalée (J\'utilise -0.325s)"</string>
   <string name="showPercentTitle">" Affichage du pourcentage "</string>
-  <string name="showPercentDesc">" Afficher les % au lieu de la lettre dans le tableau des résultats "</string>
+  <string name="showPercentDesc">"Afficher les pour cent au lieu de la lettre dans le tableau des résultats"</string>
   <string name="showFPSTitle">" Montrer les FPS "</string>
   <string name="showFPSDesc">"Afficher le nombre d\'images par seconde actuel et moyen (# de mises à jour des images/sec)"</string>
   <string name="screenshotModeTitle">"Mode capture d\'écran"</string>

@@ -6,7 +6,7 @@
 	android:versionName="@string/App_version"
 	android:installLocation="auto">
 	<uses-sdk
-		android:minSdkVersion="4"
+		android:minSdkVersion="5"
 		android:targetSdkVersion="19"
 	/>
 	<uses-permission android:name="android.permission.INTERNET"/> <!-- AdMob Localytics -->
@@ -15,6 +15,7 @@
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- Updates -->
 	<application
 		android:enabled="true"
+		android:allowBackup="true"
 		android:icon="@drawable/icon"
 		android:label="@string/App_name"
 		android:description="@string/App_description">
