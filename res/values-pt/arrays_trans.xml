@@ -24,9 +24,9 @@
     <item>osu! Mod aleatório</item>
   </string-array>
   <string-array name="noteskin">
-    <item>Default</item>
+    <item>Padrão</item>
     <item>Original</item>
-    <item>Custom</item>
+    <item>Personalizado</item>
   </string-array>
   <string-array name="backgroundImage">
     <item>Azul</item>

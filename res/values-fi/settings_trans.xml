@@ -3,9 +3,9 @@
 <resources>
   <string name="gameSettingsCategoryTitle">"Peliasetukset"</string>
   <string name="modifiersScreenTitle">"Määritteet"</string>
-  <string name="modifiersScreenDesc">"Määritteet vaikutta huomautusdataan ja ulkoasuun"</string>
+  <string name="modifiersScreenDesc">"Määritteet vaikuttaa nuottien tietoihin ja ulkoasuun"</string>
   <string name="gameplayCategoryTitle">"Pelattavuus"</string>
-  <string name="notesCategoryTitle">"Huomautukset"</string>
+  <string name="notesCategoryTitle">"Nuotit"</string>
   <string name="displaySettingsCategoryTitle">"Näyttöasetukset"</string>
   <string name="gameScreenTitle">"Pelinäyttö"</string>
   <string name="gameScreenDesc">"Näyttö pelin aikana"</string>
@@ -17,7 +17,7 @@
   <string name="machineSettingsCategoryTitle">"Koneasetukset"</string>
   <string name="miscCategoryTitle">"Muut"</string>
   <string name="infoScreenTitle">"Tiedot"</string>
-  <string name="infoScreenDesc">"Linkkejä ja tietoa Beats-sovelluksesta"</string>
+  <string name="infoScreenDesc">"Linkkejä ja tietoja Beats-sovelluksesta"</string>
   <string name="linksCategoryTitle">"Linkit"</string>
   <string name="infoCategoryTitle">"Tiedot"</string>
   <string name="thanksCategoryTitle">"Kiitos"</string>
@@ -26,7 +26,7 @@
   <string name="tweaksCategoryTitle">"Hienosäätö"</string>
   <string name="filebrowserCategoryTitle">"Kappaleen selaus"</string>
   <string name="debuggingCategoryTitle">"Virheenkorjaus"</string>
-  <string name="websiteTitle">"Verkkosivusto"</string>
+  <string name="websiteTitle">"Verkkosivu"</string>
   <string name="websiteDesc">"Lue viimeisimmäit Beats-sovelluksen päivitykset virallisilta verkkosivuilta http://beatsportable.com"</string>
   <string name="forumsTitle">"Foorumi"</string>
   <string name="forumsDesc">"Keskustelu- ja tukifoorumi "</string>
@@ -37,13 +37,13 @@
   <string name="todoTitle">"Tehtävätlista"</string>
   <string name="todoDesc">"Seuraavan version tehtävälista foorumissa"</string>
   <string name="changelogTitle">"Muutosloki"</string>
-  <string name="changelogDesc">"Seuraavan päivityksen päivitysmuustoloki foorumissa"</string>
+  <string name="changelogDesc">"Seuraavan version päivitysmuutosloki"</string>
   <string name="donateTitle">"Lahjoita"</string>
-  <string name="donateDesc">"Näytä kiitokset köyhien yliopiston opiskelijoille! Lahjoitukset pitävät sivustomme käynnissä"</string>
+  <string name="donateDesc">"Näytä kiitollisuutesi köyhien yliopiston opiskelijoille! Lahjoitukset pitävät sivustomme pystyssä"</string>
   <string name="creditsTitle">"Tekijät"</string>
   <string name="creditsDesc">"Tietoja kehittäjistä ja kaikista muista kiitettävistä"</string>
   <string name="difficultyLevelTitle">"Vaikeustaso"</string>
-  <string name="difficultyLevelDesc">"Oletusvaikeustaso kappaleissa"</string>
+  <string name="difficultyLevelDesc">"Kappaleiden oletusvaikeustaso"</string>
   <string name="speedMultiplierTitle">"Nopeus"</string>
   <string name="speedMultiplierDesc">"Nuottien nopeus"</string>
   <string name="gameModeTitle">"Pelitila"</string>
@@ -53,11 +53,11 @@
   <string name="darkTitle">"Tumma"</string>
   <string name="darkDesc">"Piilota kosketusnuolet"</string>
   <string name="holdsTitle">"Painallukset"</string>
-  <string name="holdsDesc">"Nuotit jotka painetaan pohjassa"</string>
+  <string name="holdsDesc">"Nuotit, joita pidetään pohjassa"</string>
   <string name="jumpsTitle">"Hypyt"</string>
   <string name="jumpsDesc">"Monta nuottia samalla rivillä"</string>
   <string name="randomizeTitle">"Satunnainen"</string>
-  <string name="randomizeDesc">"Satunnainen nuottien kuviot (ohittaa painallukset)"</string>
+  <string name="randomizeDesc">"Satunnaiset nuottien kuviot (ohittaa painallukset)"</string>
   <string name="accuracyLevelTitle">"Arvostelu"</string>
   <string name="accuracyLevelDesc">"Pisteytyksen tarkkuuden tiukkuus"</string>
   <string name="autoPlayTitle">"Automaattinen aloitus"</string>

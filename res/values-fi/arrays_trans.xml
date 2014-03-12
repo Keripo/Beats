@@ -3,19 +3,19 @@
 <resources>
   <string-array name="toggle">
     <item>Pois päältä</item>
-    <item>Päälle</item>
+    <item>Päällä</item>
   </string-array>
   <string-array name="difficultyLevel">
     <item>Aloittelija</item>
     <item>Helppo</item>
-    <item>Normaali</item>
-    <item>Normaali</item>
+    <item>Keskivaikea</item>
+    <item>Vaikea</item>
     <item>Haastava</item>
   </string-array>
   <string-array name="randomize">
     <item>Pois päältä</item>
-    <item>Kiinteä</item>
-    <item>Muuttuva</item>
+    <item>Staattinen</item>
+    <item>Dynaaminen</item>
   </string-array>
   <string-array name="gameMode">
     <item>Käänteinen/alas</item>
@@ -34,8 +34,8 @@
     <item>Valkoinen</item>
   </string-array>
   <string-array name="orientation">
-    <item>Vaakaesento</item>
-    <item>Pystyasento</item>
+    <item>Vaakasuunta</item>
+    <item>Pystysuunta</item>
     <item>Kääntyvä</item>
   </string-array>
   <string-array name="tapboxLayout">
@@ -57,11 +57,11 @@
     <item>Pois päältä</item>
   </string-array>
   <string-array name="accuracyLevel">
-    <item>Liian helppo</item>
+    <item>Tosi helppo</item>
     <item>Helppo</item>
     <item>Normaali</item>
     <item>Vaikea</item>
-    <item>Hyvin vaikea</item>
+    <item>Erittäin vaikea</item>
     <item>Mahdoton</item>
   </string-array>
   <string-array name="appPriority">

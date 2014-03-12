@@ -97,7 +97,7 @@
   <string name="ToolsUnzipperActivity_install">"Instalar: "</string>
   <string name="ToolsUnzipperActivity_unsupported">"Erro: Fonte de instalação não suportada. O instalador do Beats suporta apenas arquivos .zip e .smzip."</string>
   <string name="ToolsSampleInstaller_installing">"Extraindo o pacote de músicas de exemplo, por favor espere..."</string>
-  <string name="ToolsSampleInstaller_graphics">"Extracting default graphics, please wait..."</string>
+  <string name="ToolsSampleInstaller_graphics">"Extraindo gráficos padrão, por favor aguarde..."</string>
   <string name="MenuFilechooser_list_error">"Erro: Não foi possível listar os arquivos do diretório:\n"</string>
   <string name="MenuFilechooser_url_error">"Erro: Atalho da internet inválido, não foi possível determinar a URL linkada."</string>
   <string name="MenuFilechooser_up_dir">".. [subir de diretório]"</string>
