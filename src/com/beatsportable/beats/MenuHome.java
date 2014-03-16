@@ -2,6 +2,8 @@ package com.beatsportable.beats;
 
 import java.util.*;
 
+import com.google.android.gms.ads.*;
+
 import android.app.*;
 import android.content.*;
 import android.content.res.Configuration;
@@ -329,6 +331,10 @@ public class MenuHome extends Activity {
 			v = ((Vibrator) getSystemService(Context.VIBRATOR_SERVICE));
 			v.vibrate(300); // ready to rumble!
 		}
+		
+		AdView adView = (AdView)this.findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		adView.loadAd(adRequest);
 	}
 	
 	private void formatMenuItem(final TextView tv, int text) {
