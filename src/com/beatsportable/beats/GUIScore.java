@@ -13,6 +13,7 @@ public class GUIScore {
 	private int healthPenalty; // health loss per N_MISS
 	private int healthGain; // health gain per N_MARVELOUS, N_PERFECT = healthGain/2
 	public boolean gameOver;
+	public boolean isPaused;
 	// Combo
 	public int comboCount; // current combo count
 	public int comboBest; // highest combo count
@@ -80,6 +81,7 @@ public class GUIScore {
 		if (this.accuracyLevel == 0) this.accuracyLevel = 1; // Just in case, to prevent divide-by-zero
 		if (Tools.gameMode == Tools.OSU_MOD) this.accuracyLevel *= 1.5f; // more lenient with osu! Mod
 		this.gameOver = false;
+		this.isPaused = false;
 		this.showPercent = Tools.getBooleanSetting(R.string.showPercent, R.string.showPercentDefault);
 	}
 	
@@ -224,7 +226,7 @@ public class GUIScore {
 	}
 	
 	public void newEventMiss() {
-		if (!gameOver) {
+		if (!gameOver && !isPaused) {
 			this.health -= this.healthPenalty;
 			this.accuracyChart[AccuracyTypes.N_MISS.ordinal()]++;
 			this.comboCount = 0;
@@ -249,7 +251,7 @@ public class GUIScore {
 	// Returns the accuracy type, use array AccuracyTypeNames for text
 	public AccuracyTypes newEventHit(int timeDifference) {
 		int accuracy = 2 * timeDifference / accuracyLevel;
-		if (gameOver) {
+		if (gameOver || isPaused) {
 			return AccuracyTypes.X_IGNORE_ABOVE;
 		}
 		// Not GameOver
@@ -309,7 +311,7 @@ public class GUIScore {
 	public AccuracyTypes newEventHoldEnd(boolean ok) {
 		//Called when a hold is over.
 		//ok = true if the hold was completed (OK), false if player released early (NG)
-		if (gameOver) {
+		if (gameOver || isPaused) {
 			return AccuracyTypes.X_IGNORE_ABOVE;
 		} else {
 			AccuracyTypes acc = ok ? AccuracyTypes.F_OK : AccuracyTypes.F_NG;

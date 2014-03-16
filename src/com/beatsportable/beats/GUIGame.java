@@ -139,7 +139,6 @@ public class GUIGame extends Activity {
 		super.onCreate(savedInstanceState);
 		Tools.setContext(this);
 		System.gc(); // Request for garbage collection and hope it runs before updating starts
-		
 		// Get settings
 		/*
 		int priority = Integer.valueOf(
@@ -808,10 +807,9 @@ public class GUIGame extends Activity {
 	}
 	
 	
-	private boolean isPaused = false;
 	private void stopGame(String msg, int r, int g, int b, boolean screenshot, boolean showText) {
 		mp.pausePlaying();
-		if (mView != null && !isPaused) {
+		if (mView != null && !h.score.isPaused) {
 			if (!screenshotMode) {
 				if (showText) {
 					h.setMessage(msg, r, g, b);
@@ -820,7 +818,7 @@ public class GUIGame extends Activity {
 			}
 			mView.stopUpdating();
 			mView.pauseTime = SystemClock.elapsedRealtime();
-			isPaused = true;
+			h.score.isPaused = true;
 			if (screenshotMode && screenshot) {
 				//Tools.takeScreenshot(mView);
 				//Tools.takeScreenshot(this.getWindow().getDecorView(), dp.df.getTitle()); // This includes both the header AND mView - I don't know why >_>
@@ -850,7 +848,7 @@ public class GUIGame extends Activity {
 		resumeGame(true);
 	}
 	private void resumeGame(boolean showText) {
-		if (mView != null && isPaused) {
+		if (mView != null && h.score.isPaused) {
 			if (showText) h.setMessage(Tools.getString(R.string.GUIGame_resumed), 255, 190, 0); // gold
 			if (!(h.done || h.score.gameOver)) {
 				mp.resumePlaying();
@@ -860,7 +858,7 @@ public class GUIGame extends Activity {
 			mView.mStartTime += diff;
 			//mView.fpsStartTime += diff;
 			mView.startUpdating();
-			isPaused = false;
+			h.score.isPaused = false;
 		}
 	}
 	
@@ -912,7 +910,7 @@ public class GUIGame extends Activity {
 		int pitch = GUIListeners.keyCode2Direction(keyCode);
 
 		if (keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_MENU) {
-			if (isPaused) 
+			if (h.score.isPaused) 
 				resumeGame();
 			else 
 				pauseGame(true);
