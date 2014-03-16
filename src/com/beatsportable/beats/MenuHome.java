@@ -29,7 +29,7 @@ public class MenuHome extends Activity {
 	private String title = "";
 	private String backgroundPath = "";
 	private boolean largeText = false;
-	private String[] largeTextCountries= {"ko", "zh", "ru", "ja"};
+	private String[] largeTextCountries= {"ko", "zh", "ru", "ja", "tr"};
 	private static Locale defaultLocale;
 	private Vibrator v;
 	

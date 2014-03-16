@@ -394,6 +394,7 @@
 		<item>Português (BR)</item>
 		<item>Română</item>
 		<item>русский язык</item>
+		<item>Türk</item>
 		<item>中文[简体]</item>
 		<item>中文[繁體]</item>
 	</string-array>
@@ -412,6 +413,7 @@
 		<item>pt-rBR</item>
 		<item>ro</item>
 		<item>ru</item>
+		<item>tr</item>
 		<item>zh</item>
 		<item>zh-rTW</item>
 	</string-array>
