@@ -21,8 +21,7 @@
 		android:description="@string/App_description">
 		<activity
 			android:name=".MenuHome"
-			android:configChanges="orientation|keyboardHidden">
-			<!-- android:configChanges="locale|orientation|keyboardHidden"-->
+			android:configChanges="orientation|keyboardHidden|screenSize">
 			<intent-filter>
 				<action	android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
@@ -30,7 +29,7 @@
 		</activity>
 		<activity
 			android:name=".ToolsDownloader"
-			android:configChanges="orientation|keyboardHidden">
+			android:configChanges="orientation|keyboardHidden|screenSize">
 			<!--
 				Most websites report .smzip files as of MIME type application/octet-stream
 				so the only real way to handle them would be to directly download the files
@@ -49,7 +48,7 @@
 		</activity>
 		<activity
 			android:name=".ToolsUnzipperActivity"
-			android:configChanges="orientation|keyboardHidden">
+			android:configChanges="orientation|keyboardHidden|screenSize">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<action android:name="android.intent.action.VIEW"/>
@@ -117,12 +116,12 @@
 		</activity>
 		<activity
 			android:name=".MenuFileChooser"
-			android:configChanges="orientation|keyboardHidden"/>
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
 		<activity android:name=".MenuSettings"/>
 		<activity
 			android:name=".GUIGame"
 			android:theme="@style/Theme.NoBackground"
-			android:configChanges="orientation|keyboardHidden"
+			android:configChanges="orientation|keyboardHidden|screenSize"
 			/>
 				 
 		<!-- AdMob -->
