@@ -2,7 +2,7 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.beatsportable.beats"
-	android:versionCode="19"
+	android:versionCode="18"
 	android:versionName="@string/App_version"
 	android:installLocation="auto">
 	<uses-sdk
@@ -16,6 +16,7 @@
 	<application
 		android:enabled="true"
 		android:allowBackup="true"
+		android:hardwareAccelerated="true"
 		android:icon="@drawable/icon"
 		android:label="@string/App_name"
 		android:description="@string/App_description">

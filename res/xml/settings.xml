@@ -81,6 +81,13 @@
 		</PreferenceCategory>
 	</PreferenceScreen>
 	<PreferenceCategory android:title="@string/displaySettingsCategoryTitle">
+		<ListPreference
+			android:title="@string/hardwareAccelerationTitle"
+			android:summary="@string/hardwareAccelerationDesc"
+			android:key="@string/hardwareAccelerate"
+			android:defaultValue="@string/hardwareAccelerateDefault"
+			android:entries="@array/toggleDefault"
+			android:entryValues="@array/toggleDefaultValues" />
 		<PreferenceScreen
 			android:title="@string/gameScreenTitle"
 			android:summary="@string/gameScreenDesc">

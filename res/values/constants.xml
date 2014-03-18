@@ -70,6 +70,8 @@
 	<string name="autoPlayDefault">"0"</string>
 	<string name="gameMode">"gameMode"</string>
 	<string name="gameModeDefault">"0"</string>
+	<string name="hardwareAccelerate">"hardwareAccelerate"</string>
+	<string name="hardwareAccelerateDefault">"-1"</string>
 	<string name="fullscreen">"fullscreen"</string>
 	<string name="fullscreenDefault">"0"</string>
 	<string name="backgroundShow">"backgroundShow"</string>

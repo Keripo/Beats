@@ -3,7 +3,6 @@ package com.beatsportable.beats;
 import java.io.File;
 import java.util.HashMap;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -27,7 +26,7 @@ public class GUIGame extends Activity {
 	private MusicService mp;
 	private GUIListeners listeners;
 	
-	private StepManiaView mView;
+	private GameViewHandler mView;
 	private int orientation;
 	private boolean backgroundShow;
 	private boolean backgroundSong;
@@ -196,9 +195,21 @@ public class GUIGame extends Activity {
 		Tools.setScreenDimensions();
 		
 		// Setup view
-		mView = new StepManiaView(this);		
-		
-		setContentView(mView);
+		int hardwareAccelerate = Integer.valueOf(
+				Tools.getSetting(R.string.hardwareAccelerate, R.string.hardwareAccelerateDefault));
+		if (hardwareAccelerate < 0) {
+			if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN) { // Chosen experimentally
+				hardwareAccelerate = 1;
+			} else {
+				hardwareAccelerate = 0;
+			}
+		}
+		if (hardwareAccelerate == 1) {
+			mView = new RefreshHandlerView(this);
+		} else {
+			mView = new SurfaceHolderView(this);
+		}
+		setContentView(mView.getView());
 		
 		if (Tools.gameMode == Tools.OSU_MOD) {
 			h = new GUIHandlerOsu();
@@ -213,7 +224,7 @@ public class GUIGame extends Activity {
 		} else {
 			listeners = new GUIListenersMulti(h);
 		}
-		mView.setOnTouchListener(listeners.getOnTouchListener());
+		mView.getView().setOnTouchListener(listeners.getOnTouchListener());
 		
 		this.dp = MenuStartGame.dp;
 		h.loadSongData(dp);
@@ -241,7 +252,7 @@ public class GUIGame extends Activity {
 		
 		// Setup display
 		h.setupXY();
-		mView.setupDraw();
+		mView.getGameView().setupDraw();
 		if (orientation != ROTATABLE) setRequestedOrientation(orientation);
 		
 		//Preload commonly used bitmaps
@@ -264,17 +275,17 @@ public class GUIGame extends Activity {
 		super.onConfigurationChanged(newConfig);
 		Tools.setScreenDimensions();
 		h.setupXY();
-		mView.setupBG();
+		mView.getGameView().setupBG();
 	}
 	public static int currentTime = 0;
 	
-	private class DrawThread extends Thread {
+	private class SurfaceHolderThread extends Thread {
 		private SurfaceHolder _surfaceHolder;
-		private StepManiaView _view;
+		private GameView _view;
 		private boolean _run = false;
 		private boolean _paused = false;
 	 
-		public DrawThread(SurfaceHolder surfaceHolder, StepManiaView view) {
+		public SurfaceHolderThread(SurfaceHolder surfaceHolder, GameView view) {
 			_surfaceHolder = surfaceHolder;
 			_view = view;
 		}
@@ -293,8 +304,8 @@ public class GUIGame extends Activity {
 			while (_run) {
 				c = null;
 				try {
-					c = _surfaceHolder.lockCanvas(null);
 					synchronized (_surfaceHolder) {
+						c = _surfaceHolder.lockCanvas(null);
 						if (_view != null && c != null) {
 							if (!_paused) {
 								_view.update();
@@ -314,7 +325,7 @@ public class GUIGame extends Activity {
 		}
 	}
 	
-	private class StepManiaView extends SurfaceView implements SurfaceHolder.Callback {
+	private class GameView {
 		private int frameCount = 0;
 		private int frameCountTotal = 0;
 		private long fpsStartTime = 0;
@@ -324,17 +335,6 @@ public class GUIGame extends Activity {
 		//private String fpsTruncated = "";
 		//private String fpsTruncatedTotal = "";
 		private boolean fpsTotalStarted = false;
-		public DrawThread _thread;
-		
-		public StepManiaView(Context context) {
-			super(context);
-			this.setFocusable(true);
-			this.requestFocus();
-			this.getHolder().addCallback(this);
-			this._thread = new DrawThread(this.getHolder(), this);
-		}
-		
-		
 		
 		public void startTimer() {
 			// To be safe
@@ -344,9 +344,6 @@ public class GUIGame extends Activity {
 			mFrameNo = 0;
 			countDown = -75; // 75 frames before the song begins
 			syncCounter = 0;
-			// Start the updates!
-			//mRedrawHandler = new RefreshHandler();
-			update();
 		}
 		
 		private int margin, height;
@@ -545,8 +542,7 @@ public class GUIGame extends Activity {
 			ToolsTracker.data("Game started", attributes);
 		}
 		
-		@SuppressLint("DrawAllocation") @Override
-		protected void onDraw(Canvas canvas) {
+		public void onDraw(Canvas canvas) {
 
 			// FPS
 			if (showFPS) {
@@ -574,7 +570,6 @@ public class GUIGame extends Activity {
 			
 			// Just in case
 			if (h == null) {
-				super.onDraw(canvas);
 				return;
 			}
 									
@@ -738,50 +733,127 @@ public class GUIGame extends Activity {
 					mFrameNo++;
 				}
 			}
-			
-			//startUpdating();
+		}
+	}
+	
+	private interface GameViewHandler {
+		View getView();
+		GameView getGameView();
+		void startTimer();
+		void startUpdating();
+		void stopUpdating();
+		void forceUpdate();
+		void update();
+	}
+	
+	private class RefreshHandlerView extends View implements GameViewHandler {
+		private GameView mView;
+		private RefreshHandler mRedrawHandler;
+		
+		public RefreshHandlerView(Context context) {
+			super(context);
+			mView = new GameView();
+			mRedrawHandler = new RefreshHandler();
+			this.setFocusable(true);
+			this.requestFocus();
+			this.startTimer();
+		}
+		
+		public View getView() {
+			return this;
+		}
+	
+		public GameView getGameView() {
+			return mView;
+		}
+		
+		public void update() {
+			mView.update();
+			mRedrawHandler.start();
+		}
+		
+		public void startTimer() {
+			mView.startTimer();
+			mRedrawHandler.start();
 		}
 		
 		public void startUpdating() {
-			//mRedrawHandler.start();
-			_thread.setPaused(false);
-		}
-		public void stopUpdating() {
-			//mRedrawHandler.removeCallbacksAndMessages(null);
-			_thread.setPaused(true);
-		}
-		public void forceUpdate() {
-			//mView.mRedrawHandler.handleMessage(null);
+			mRedrawHandler.start();
 		}
 		
-		/*
-		private RefreshHandler mRedrawHandler;
+		public void stopUpdating() {
+			mRedrawHandler.removeCallbacksAndMessages(null);
+		}
+		
+		public void forceUpdate() {
+			mRedrawHandler.handleMessage(null);
+		}
+		
+		@Override
+		public void onDraw(Canvas canvas) {
+			mView.onDraw(canvas);
+		}
+		
 		class RefreshHandler extends Handler {
 			@Override
 			public void handleMessage(Message msg) {
-				StepManiaView.this.update();
-				StepManiaView.this.invalidate();
+				RefreshHandlerView.this.update();
+				RefreshHandlerView.this.invalidate();
 			}
-			*/
-			/*
-			public void sleep(long delayMillis) {
-				this.removeMessages(0);
-				sendMessageDelayed(obtainMessage(0), delayMillis);
-			}
-			*/
-		/*
+			
 			public void start() {
 				this.removeMessages(0);
 				sendMessage(obtainMessage(0));
 			}
 		}
-		*/
+	}
+	
+	private class SurfaceHolderView extends SurfaceView implements SurfaceHolder.Callback, GameViewHandler {
+		public SurfaceHolderThread _thread;
+		private GameView mView;
+		
+		public SurfaceHolderView(Context context) {
+			super(context);
+			mView = new GameView();
+			getHolder().addCallback(this);
+			_thread = new SurfaceHolderThread(this.getHolder(), mView);
+		}
+		
+		public View getView() {
+			return this;
+		}
+		
+		public GameView getGameView() {
+			return mView;
+		}
+		
+		public void update() {
+			mView.update();
+		};
+		
+		public void startTimer() {
+			mView.startTimer();
+			mView.update();
+		}
+		
+		public void startUpdating() {
+			_thread.setPaused(false);
+		}
+		
+		public void stopUpdating() {
+			_thread.setPaused(true);
+		}
+		
+		public void forceUpdate() {
+			// TODO Auto-generated method stub
+		}
+	
 		public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 			// TODO Auto-generated method stub
-			
 		}
+		
 		public void surfaceCreated(SurfaceHolder holder) {
-			_thread = new DrawThread(holder, this);
+			_thread = new SurfaceHolderThread(holder, mView);
 			_thread.setRunning(true);
 			if (!_thread.isAlive()) {
 				_thread.start();
@@ -803,9 +875,8 @@ public class GUIGame extends Activity {
 					// we will try it again and again...
 				}
 			}
-		};
+		}
 	}
-	
 	
 	private void stopGame(String msg, int r, int g, int b, boolean screenshot, boolean showText) {
 		mp.pausePlaying();
@@ -817,7 +888,7 @@ public class GUIGame extends Activity {
 				mView.forceUpdate();
 			}
 			mView.stopUpdating();
-			mView.pauseTime = SystemClock.elapsedRealtime();
+			mView.getGameView().pauseTime = SystemClock.elapsedRealtime();
 			h.score.isPaused = true;
 			if (screenshotMode && screenshot) {
 				//Tools.takeScreenshot(mView);
@@ -831,7 +902,7 @@ public class GUIGame extends Activity {
 	private void takeScreenshot() {
 		Bitmap screenshot = Bitmap.createBitmap(Tools.screen_w, Tools.screen_h, Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(screenshot);
-		mView.onDraw(canvas);
+		mView.getGameView().onDraw(canvas);
 		Tools.takeScreenshot(screenshot, dp.df.getTitle());
 	}
 	
@@ -852,10 +923,10 @@ public class GUIGame extends Activity {
 			if (showText) h.setMessage(Tools.getString(R.string.GUIGame_resumed), 255, 190, 0); // gold
 			if (!(h.done || h.score.gameOver)) {
 				mp.resumePlaying();
-				mView.syncCounter = -200; // Sync for at least 200 frames
+				mView.getGameView().syncCounter = -200; // Sync for at least 200 frames
 			}
-			long diff = (SystemClock.elapsedRealtime() - mView.pauseTime);
-			mView.mStartTime += diff;
+			long diff = (SystemClock.elapsedRealtime() - mView.getGameView().pauseTime);
+			mView.getGameView().mStartTime += diff;
 			//mView.fpsStartTime += diff;
 			mView.startUpdating();
 			h.score.isPaused = false;
@@ -867,6 +938,9 @@ public class GUIGame extends Activity {
 		if (hasFocus) {
 			Tools.setContext(this);
 			this.setTitle(title);
+			if (h.score.isPaused) { 
+				resumeGame(mView.getGameView().countDown >= 0);
+			}
 		} else if (!hasFocus && !autoPlay) { // continue even if screen turns off
 			pauseGame(false);
 		}
@@ -886,7 +960,7 @@ public class GUIGame extends Activity {
 		 * http://stackoverflow.com/questions/1949066/java-lang-outofmemoryerror-bitmap-size-exceeds-vm-budget-android
 		 * http://code.google.com/p/android/issues/detail?id=8488
 		 * */
-		mView.clearBitmaps();
+		mView.getGameView().clearBitmaps();
 		drawarea.clearBitmaps();
 		System.gc();
 	}

@@ -8,6 +8,12 @@
 		<item>1</item>
 	</string-array>
 	
+	<string-array name="toggleDefaultValues">
+		<item>-1</item>
+	    <item>0</item>
+		<item>1</item>
+	</string-array>
+	
 	<string-array name="difficultyLevelValues">
 		<item>0</item>
 		<item>1</item>
@@ -394,7 +400,7 @@
 		<item>Português (BR)</item>
 		<item>Română</item>
 		<item>русский язык</item>
-		<item>Türk</item>
+		<item>Türkçe</item>
 		<item>中文[简体]</item>
 		<item>中文[繁體]</item>
 	</string-array>
@@ -417,5 +423,4 @@
 		<item>zh</item>
 		<item>zh-rTW</item>
 	</string-array>
-	
 </resources>
