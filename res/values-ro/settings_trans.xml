@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">"Setările jocului"</string>
   <string name="notesCategoryTitle">"Note"</string>
   <string name="displaySettingsCategoryTitle">"Setări afişaj"</string>
+  <string name="hardwareAccelerationTitle">Accelerare hardware</string>
+  <string name="hardwareAccelerationDesc">Poate îmbunătăţi FPS</string>
   <string name="gameScreenTitle">"Ecran joc"</string>
   <string name="gameScreenDesc">"Ecran în timpul jocului"</string>
   <string name="interfaceCategoryTitle">"Interfață joc"</string>

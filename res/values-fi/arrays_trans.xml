@@ -5,6 +5,11 @@
     <item>Pois päältä</item>
     <item>Päällä</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Oletus</item>
+    <item>Pois päältä</item>
+    <item>Päällä</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Aloittelija</item>
     <item>Helppo</item>

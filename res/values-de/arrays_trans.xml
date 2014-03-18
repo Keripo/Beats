@@ -5,6 +5,11 @@
     <item>Aus</item>
     <item>An</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Standard</item>
+    <item>Aus</item>
+    <item>An</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Anfänger</item>
     <item>Einfach</item>

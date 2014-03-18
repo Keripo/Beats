@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Notes sur la dernière version de Beats"</string>
   <string name="MenuSettings_title">"Beats - Paramètres"</string>
   <string name="DataParser_unsupported">"Stepfile non supporté : seuls les fichiers .sm, .dwi et .osu sont supportés pour le moment."</string>
-  <string name="MenuStartGame_loading_title">"Chargement"</string>
+  <string name="MenuStartGame_loading_title">"Chargement: "</string>
   <string name="MenuStartGame_loading_progress_bar">"Chargement du stepfile:\n"</string>
   <string name="MenuStartGame_fail_parse">"Erreur : échec du traitement du stepfile:\n"</string>
   <string name="MenuStartGame_notes_error">"Aucune donnée de notes supportée trouvée"</string>

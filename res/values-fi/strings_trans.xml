@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Beats-julkaisutiedot"</string>
   <string name="MenuSettings_title">"Beats - Asetukset"</string>
   <string name="DataParser_unsupported">"Tiedosto muotoa ei tueta: vain .sm, .dwi ja .osu tiedostomuotoja tuetaan tällä hetkellä."</string>
-  <string name="MenuStartGame_loading_title">"Ladataan: "</string>
+  <string name="MenuStartGame_loading_title">"Lastaus:"</string>
   <string name="MenuStartGame_loading_progress_bar">"Ladataan musiikkikappaletta:\n"</string>
   <string name="MenuStartGame_fail_parse">"Virhe: musiikkikappaleen jäsentäminen epäonnistui:\n"</string>
   <string name="MenuStartGame_notes_error">"Tuettua nuottidataa ei löytynyt."</string>

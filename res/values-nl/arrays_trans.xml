@@ -5,6 +5,11 @@
     <item>Uit</item>
     <item>Aan</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Default</item>
+    <item>Uit</item>
+    <item>Aan</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Beginneling</item>
     <item>Eenvoudig</item>

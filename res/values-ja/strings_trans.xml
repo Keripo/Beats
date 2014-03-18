@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">リリースノート</string>
   <string name="MenuSettings_title">"Beats - 設定"</string>
   <string name="DataParser_unsupported">「サポートされていない stepfile:  .sm .dwi .osu ファイルのみ現在サポートされています。」</string>
-  <string name="MenuStartGame_loading_title">ロード中</string>
+  <string name="MenuStartGame_loading_title">"Loading: "</string>
   <string name="MenuStartGame_loading_progress_bar">"stepfile：\nをロード中"</string>
   <string name="MenuStartGame_fail_parse">エラー: stepfile:\nの解析に失敗しました</string>
   <string name="MenuStartGame_notes_error">サポートされているデータがありません</string>

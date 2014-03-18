@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Beats Release Notes"</string>
   <string name="MenuSettings_title">"Beats - Instellingen"</string>
   <string name="DataParser_unsupported">"Stepfile niet ondersteund: er Beats ondersteunt nu alleen .sm, .dwi en .osu files."</string>
-  <string name="MenuStartGame_loading_title">"Laden: "</string>
+  <string name="MenuStartGame_loading_title">Laden: </string>
   <string name="MenuStartGame_loading_progress_bar">"Stepfile laden:\n"</string>
   <string name="MenuStartGame_fail_parse">"Fout: Kan de stepfile niet inlezen:\n"</string>
   <string name="MenuStartGame_notes_error">"Geen ondersteunde noten data gevonden."</string>
@@ -97,7 +97,7 @@
   <string name="ToolsUnzipperActivity_install">"Installatie: "</string>
   <string name="ToolsUnzipperActivity_unsupported">"Fout: Installatiebestand niet ondersteund. De installer van Beats ondersteunt alleen .zip en .smzip bestanden."</string>
   <string name="ToolsSampleInstaller_installing">"Voorbeeld stepfiles aan het extracten. Even geduld AUB..."</string>
-  <string name="ToolsSampleInstaller_graphics">"Extracting default graphics, please wait..."</string>
+  <string name="ToolsSampleInstaller_graphics">\'Standaard graphics wilt uitpakken, please wait...\'</string>
   <string name="MenuFilechooser_list_error">"Fout: Kan de bestanden in de map niet weergeven:\n"</string>
   <string name="MenuFilechooser_url_error">"Error: Ongeldige hyperlink, kan de gelinkte url niet bepalen."</string>
   <string name="MenuFilechooser_up_dir">".. [een niveau omhoog]"</string>

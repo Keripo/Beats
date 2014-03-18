@@ -5,6 +5,11 @@
     <item>オフ</item>
     <item>オン</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>既定</item>
+    <item>オフ</item>
+    <item>オン</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>初心者</item>
     <item>簡単</item>
@@ -25,8 +30,8 @@
   </string-array>
   <string-array name="noteskin">
     <item>既定</item>
-    <item>Original</item>
-    <item>Custom</item>
+    <item>翻訳元</item>
+    <item>カスタム</item>
   </string-array>
   <string-array name="backgroundImage">
     <item>青</item>

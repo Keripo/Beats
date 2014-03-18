@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Beats Release Notes"</string>
   <string name="MenuSettings_title">"Beats - Settings"</string>
   <string name="DataParser_unsupported">"Unsupported stepfile: only .sm, .dwi and .osu files are supported currently."</string>
-  <string name="MenuStartGame_loading_title">"Beats - Loading: "</string>
+  <string name="MenuStartGame_loading_title">"Loading: "</string>
   <string name="MenuStartGame_loading_progress_bar">"Loading stepfile:\n"</string>
   <string name="MenuStartGame_fail_parse">"Error: Failed to parse stepfile:\n"</string>
   <string name="MenuStartGame_notes_error">"No supported notes data found."</string>

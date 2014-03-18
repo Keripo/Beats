@@ -5,6 +5,11 @@
     <item>Desligado</item>
     <item>Ligado</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Padrão</item>
+    <item>Desligado</item>
+    <item>Ligado</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Iniciante</item>
     <item>Fácil</item>

@@ -5,6 +5,11 @@
     <item>关</item>
     <item>开</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>默认</item>
+    <item>关</item>
+    <item>开</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>新手</item>
     <item>简单</item>

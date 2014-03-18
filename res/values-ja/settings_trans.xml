@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">ゲームプレイ</string>
   <string name="notesCategoryTitle">ノート</string>
   <string name="displaySettingsCategoryTitle">画面の設定</string>
+  <string name="hardwareAccelerationTitle">ハードウェア アクセラレーション</string>
+  <string name="hardwareAccelerationDesc">FPS を向上させることがあります。</string>
   <string name="gameScreenTitle">ゲーム画面</string>
   <string name="gameScreenDesc">"Screen during gameplay"</string>
   <string name="interfaceCategoryTitle">ゲーム界面</string>

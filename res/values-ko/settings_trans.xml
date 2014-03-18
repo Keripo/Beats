@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">"게임플레이"</string>
   <string name="notesCategoryTitle">"노트들"</string>
   <string name="displaySettingsCategoryTitle">"화면 설정"</string>
+  <string name="hardwareAccelerationTitle">하드웨어 가속</string>
+  <string name="hardwareAccelerationDesc">FPS를 향상 시킬 수 있습니다.</string>
   <string name="gameScreenTitle">"게임 화면"</string>
   <string name="gameScreenDesc">"게임플레이 도중 화면"</string>
   <string name="interfaceCategoryTitle">"게임 인터페이스"</string>

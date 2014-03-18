@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Note despre versiunea curentă Beats"</string>
   <string name="MenuSettings_title">"Beats - setări"</string>
   <string name="DataParser_unsupported">"Acest format nu este încă suportat: numai fişierele .sm, .dwi şi .osu pot fi deschise deocamdată."</string>
-  <string name="MenuStartGame_loading_title">"se încarcă: "</string>
+  <string name="MenuStartGame_loading_title">"Încărcare:"</string>
   <string name="MenuStartGame_loading_progress_bar">"Se încarcă stepfile-ul:\n"</string>
   <string name="MenuStartGame_fail_parse">"Eroare: Nu a reuşit analizarea stepfile-ului:\n"</string>
   <string name="MenuStartGame_notes_error">"Nu s-au găsit date despre notele suportate."</string>

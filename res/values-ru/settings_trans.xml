@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">"Геймплей"</string>
   <string name="notesCategoryTitle">"Ноты"</string>
   <string name="displaySettingsCategoryTitle">"Настройки Дисплея"</string>
+  <string name="hardwareAccelerationTitle">Аппаратное ускорение</string>
+  <string name="hardwareAccelerationDesc">Может повысить FPS</string>
   <string name="gameScreenTitle">"Игровой Экран"</string>
   <string name="gameScreenDesc">"Экран во время игры"</string>
   <string name="interfaceCategoryTitle">"Игровой интерфейс"</string>

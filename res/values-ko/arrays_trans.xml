@@ -5,6 +5,11 @@
     <item>꺼짐</item>
     <item>켜짐</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>기본</item>
+    <item>꺼짐</item>
+    <item>켜짐</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>초급</item>
     <item>하급</item>

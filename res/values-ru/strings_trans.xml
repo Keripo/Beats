@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Особенности Выпуска Beats"</string>
   <string name="MenuSettings_title">"Beats - Настройки"</string>
   <string name="DataParser_unsupported">"Неподдерживаемый файл шагов: в данный момент поддерживаются только .sm, .dwi и .osu"</string>
-  <string name="MenuStartGame_loading_title">"Загрузка: "</string>
+  <string name="MenuStartGame_loading_title">"Загрузки: "</string>
   <string name="MenuStartGame_loading_progress_bar">"Загрузка файла шагов:\n"</string>
   <string name="MenuStartGame_fail_parse">"Ошибка: Не удалось обработать файл шагов:\n"</string>
   <string name="MenuStartGame_notes_error">"Не найдены поддерживаемые данные нот."</string>

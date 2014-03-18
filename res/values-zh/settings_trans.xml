@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">"游戏性"</string>
   <string name="notesCategoryTitle">"音符排列方式"</string>
   <string name="displaySettingsCategoryTitle">"显示设置"</string>
+  <string name="hardwareAccelerationTitle">硬件加速</string>
+  <string name="hardwareAccelerationDesc">可能会提高 FPS</string>
   <string name="gameScreenTitle">"游戏画面"</string>
   <string name="gameScreenDesc">游戏界面</string>
   <string name="interfaceCategoryTitle">“游戏界面”</string>

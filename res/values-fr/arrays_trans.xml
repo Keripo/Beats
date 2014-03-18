@@ -5,6 +5,11 @@
     <item>Désactivé</item>
     <item>Activé</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Par défaut</item>
+    <item>Désactivé</item>
+    <item>Activé</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Débutant</item>
     <item>Facile</item>

@@ -5,6 +5,11 @@
     <item>Oprit</item>
     <item>Pornit</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Implicit</item>
+    <item>Oprit</item>
+    <item>Pornit</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Începător</item>
     <item>Uşor</item>

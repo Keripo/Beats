@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">"Gameplay"</string>
   <string name="notesCategoryTitle">"Noten"</string>
   <string name="displaySettingsCategoryTitle">"Weergaveinstellingen"</string>
+  <string name="hardwareAccelerationTitle">Hardwareversnelling</string>
+  <string name="hardwareAccelerationDesc">FPS kan verbeteren</string>
   <string name="gameScreenTitle">"Speelveld"</string>
   <string name="gameScreenDesc">"Weergave tijdens het spel"</string>
   <string name="interfaceCategoryTitle">"Spelinterface"</string>
@@ -70,8 +72,8 @@
   <string name="backgroundBrightnessDesc">"Helderheid van het achtergrondplaatje"</string>
   <string name="backgroundSongTitle">"Achtergrond Laden"</string>
   <string name="backgroundSongDesc">"Laad de achtergrond specifiek voor het nummer"</string>
-  <string name="noteskinTitle">"Note Skin"</string>
-  <string name="noteskinDesc">"Note graphics to load"</string>
+  <string name="noteskinTitle">"Opmerking huid"</string>
+  <string name="noteskinDesc">"Opmerking Afbeeldingen laden"</string>
   <string name="backgroundImageTitle">"Menu-achtergrond"</string>
   <string name="backgroundImageDesc">"Achtergrond voor hoofdmenu en stepfiles zonder plaatje"</string>
   <string name="orientationTitle">"Schermoriëntatie"</string>

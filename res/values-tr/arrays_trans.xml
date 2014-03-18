@@ -5,6 +5,11 @@
     <item>Kapalı</item>
     <item>Açık</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>Varsayılan</item>
+    <item>Kapalı</item>
+    <item>Açık</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Acemi</item>
     <item>Kolay</item>
@@ -20,8 +25,8 @@
   <string-array name="gameMode">
     <item>Tersten/Aşağı</item>
     <item>Standart/Yukarı</item>
-    <item>osu! Mod</item>
-    <item>osu! Mod Rand</item>
+    <item>Balonlar (osu! modu)</item>
+    <item>Balonlar (osu! mod rand)</item>
   </string-array>
   <string-array name="noteskin">
     <item>Varsayılan</item>
@@ -36,7 +41,7 @@
   <string-array name="orientation">
     <item>Manzara</item>
     <item>Portre</item>
-    <item>Dönebilen</item>
+    <item>Değiştirilebilir</item>
   </string-array>
   <string-array name="tapboxLayout">
     <item>D-Pad</item>
@@ -48,7 +53,7 @@
   <string-array name="noteAppearance">
     <item>Görünür</item>
     <item>Gizli</item>
-    <item>Ani</item>
+    <item>Aniden</item>
     <item>Görünmez</item>
   </string-array>
   <string-array name="vibrateMiss">

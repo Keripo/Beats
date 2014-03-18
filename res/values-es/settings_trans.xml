@@ -7,6 +7,8 @@
   <string name="gameplayCategoryTitle">"Juego"</string>
   <string name="notesCategoryTitle">"Notas"</string>
   <string name="displaySettingsCategoryTitle">"Opciones de visualización"</string>
+  <string name="hardwareAccelerationTitle">Aceleración de hardware</string>
+  <string name="hardwareAccelerationDesc">Puede mejorar FPS</string>
   <string name="gameScreenTitle">Pantalla de juego</string>
   <string name="gameScreenDesc">La pantalla durante el juego</string>
   <string name="interfaceCategoryTitle">Interfaz del juego</string>

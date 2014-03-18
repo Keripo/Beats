@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Notas de Lançamento do Beats"</string>
   <string name="MenuSettings_title">"Beats - Configurações"</string>
   <string name="DataParser_unsupported">"Arquivo não suportado: somente arquivos do tipo .sm, .dwi e .osu são suportados atualmente."</string>
-  <string name="MenuStartGame_loading_title">"Carregando: "</string>
+  <string name="MenuStartGame_loading_title">"Carregar:"</string>
   <string name="MenuStartGame_loading_progress_bar">"Carregando a música:\n"</string>
   <string name="MenuStartGame_fail_parse">"Erro: Falha ao tentar analisar o arquivo:\n"</string>
   <string name="MenuStartGame_notes_error">"Nenhum dado de notas suportado encontrado."</string>

@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"Notas de la version"</string>
   <string name="MenuSettings_title">"Beats - Configuración"</string>
   <string name="DataParser_unsupported">Stepfile no soportado: actualmente solo archivos .sm, .dwi y .osu son soportados</string>
-  <string name="MenuStartGame_loading_title">"Cargando: "</string>
+  <string name="MenuStartGame_loading_title">"Carga:"</string>
   <string name="MenuStartGame_loading_progress_bar">"Cargando stepfile:\n"</string>
   <string name="MenuStartGame_fail_parse">"Error: No se ha podido analizar el archivo el stepfile:\n"</string>
   <string name="MenuStartGame_notes_error">"No se encontraron archivos de notas."</string>

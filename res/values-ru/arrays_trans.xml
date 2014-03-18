@@ -5,6 +5,11 @@
     <item>Выкл</item>
     <item>Вкл</item>
   </string-array>
+  <string-array name="toggleDefault">
+    <item>По-умолчанию</item>
+    <item>Выкл</item>
+    <item>Вкл</item>
+  </string-array>
   <string-array name="difficultyLevel">
     <item>Новичок</item>
     <item>Легко</item>

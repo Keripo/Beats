@@ -45,7 +45,7 @@
   <string name="MenuHome_release_notes_title">"開發者遊戲發布說明"</string>
   <string name="MenuSettings_title">"Beats - 設置"</string>
   <string name="DataParser_unsupported">不支持的格式:目前只支持.sm、.dwi和.osu的格式。</string>
-  <string name="MenuStartGame_loading_title">"遊戲加載中··· : "</string>
+  <string name="MenuStartGame_loading_title">遊戲加載中··· : </string>
   <string name="MenuStartGame_loading_progress_bar">"正在加載音符文件:\n"</string>
   <string name="MenuStartGame_fail_parse">"錯誤: 無法解析音符文件:\n"</string>
   <string name="MenuStartGame_notes_error">"未發現支持的音符數據"</string>
