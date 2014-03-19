@@ -201,7 +201,8 @@ public class GUIGame extends Activity {
 			// Test for hardware acceleration
 			View testView = new View(this);
 			setContentView(testView);
-			if (testView.isHardwareAccelerated()) {
+			// Hardware acceleration support was added in Honeycomb (11)
+			if (Build.VERSION.SDK_INT >= 11 && testView.isHardwareAccelerated()) {
 				hardwareAccelerate = 1;
 			} else {
 				hardwareAccelerate = 0;
