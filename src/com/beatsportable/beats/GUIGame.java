@@ -198,7 +198,10 @@ public class GUIGame extends Activity {
 		int hardwareAccelerate = Integer.valueOf(
 				Tools.getSetting(R.string.hardwareAccelerate, R.string.hardwareAccelerateDefault));
 		if (hardwareAccelerate < 0) {
-			if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN) { // Chosen experimentally
+			// Test for hardware acceleration
+			View testView = new View(this);
+			setContentView(testView);
+			if (testView.isHardwareAccelerated()) {
 				hardwareAccelerate = 1;
 			} else {
 				hardwareAccelerate = 0;
@@ -207,6 +210,7 @@ public class GUIGame extends Activity {
 		if (hardwareAccelerate == 1) {
 			mView = new RefreshHandlerView(this);
 		} else {
+			// SurfaceView is not hardware accelerated but faster than normal Views
 			mView = new SurfaceHolderView(this);
 		}
 		setContentView(mView.getView());

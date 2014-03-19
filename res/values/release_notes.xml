@@ -41,12 +41,14 @@ The open source code can be found at https://github.com/Keripo/Beats
 Future development will continue with the open source \"Beats2\" project.
 See http://beatsportable.com for the latest updates.
 
-Beats 1.7.3b FINAL - 2014/03/17
+Beats 1.7.3b FINAL - 2014/03/19
 - all source code now hosted on GitHub
 - built against Android 4.4 (API 19)
-- fixed scoring while paused bug/exploit
+- support hardware acceleration
+- fixed scoring-while-paused bug/exploit
 - fixed restart on rotation bug
 - fixed crash when #MUSIC is empty
+- tweaked tap-registering window (early taps no longer ignored)
 - added tr translation
 - updated fi, pt, pt-rBR translations
 - updated UHL, AdMob and Localytics libraries
