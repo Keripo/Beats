@@ -68,64 +68,69 @@
 			</LinearLayout>
 		</RelativeLayout>
 		<!-- Body -->
-		<LinearLayout
-			android:orientation="vertical"
+		<RelativeLayout
+		    android:orientation="vertical"
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent">
-			<!-- Logo -->
-			<ImageView
-				android:id="@+id/logo"
-				android:layout_width="fill_parent"
+			<!-- AdMob -->
+			<com.google.android.gms.ads.AdView
+			    android:id="@+id/adView"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/beats_logo_beta"
+				android:layout_alignParentBottom="true"
+				ads:adUnitId="@string/AdMob_key"
+				ads:adSize="BANNER"
 			/>
-			<!-- Menu items -->
 			<LinearLayout
-				android:id="@+id/menu_main_items_LinearLayout"
+				android:orientation="vertical"
 				android:layout_width="fill_parent"
-				android:layout_height="fill_parent"
-				android:gravity="center_horizontal"
-				android:orientation="vertical">
-				<TextView
-					android:id="@+id/start"
-					android:layout_width="wrap_content"
+				android:layout_height="fill_parent">
+				<!-- Logo -->
+				<ImageView
+					android:id="@+id/logo"
+					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
-					android:text="@string/Menu_start"
+					android:src="@drawable/beats_logo_beta"
 				/>
-				<TextView
-					android:id="@+id/select_song"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="@string/Menu_select_song"
-				/>
-				<TextView
-					android:id="@+id/download_songs"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="@string/Menu_download_songs"
-				/>
-				<TextView
-					android:id="@+id/settings"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="@string/Menu_settings"
-				/>
-				<TextView
-					android:id="@+id/exit"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="@string/Menu_exit"
-				/>
+				<!-- Menu items -->
+				<LinearLayout
+					android:id="@+id/menu_main_items_LinearLayout"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:gravity="center_horizontal"
+					android:orientation="vertical">
+					<TextView
+						android:id="@+id/start"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/Menu_start"
+					/>
+					<TextView
+						android:id="@+id/select_song"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/Menu_select_song"
+					/>
+					<TextView
+						android:id="@+id/download_songs"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/Menu_download_songs"
+					/>
+					<TextView
+						android:id="@+id/settings"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/Menu_settings"
+					/>
+					<TextView
+						android:id="@+id/exit"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/Menu_exit"
+					/>
+				</LinearLayout>
 			</LinearLayout>
-		</LinearLayout>
+		</RelativeLayout>
 	</LinearLayout>
-	<!-- AdMob -->
-	<com.google.android.gms.ads.AdView
-	    android:id="@+id/adView"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		ads:adUnitId="@string/AdMob_key"
-		ads:adSize="BANNER"
-	/>
 </RelativeLayout>

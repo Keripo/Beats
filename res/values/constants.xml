@@ -4,7 +4,7 @@
 	<string name="App_name">"Beats"</string>
 	<string name="Titlebar">"Beats - "</string>
 	<string name="Localytics_key">"7e17c9425cf4aec59bccf6f-8039babc-3418-11e0-c2c6-007af5bd88a0"</string>
-	<string name="AdMob_key">"a14cb42f9400bc9"</string>
+	<string name="AdMob_key">"ca-app-pub-3227647815358414/2969328888"</string>
 	
 	<!-- URLs -->
 	<string name="Url_website">"http://beatsportable.com"</string>
