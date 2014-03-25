@@ -220,13 +220,9 @@ public class GUIScore {
 		//return holdCount;
 	//}
 	
-	// Note: The above threshold value is large because lots of first-time users tap early 
-	private final int IGNORE_ABOVE_THRESHOLD = 20;  
-	private final int IGNORE_BELOW_THRESHOLD = -9;
-	
 	// If a note goes this level, call newEventMiss
 	public int getMissThreshold() {
-		return accuracyLevel * (IGNORE_BELOW_THRESHOLD - 1) / 2;
+		return accuracyLevel * -10 / 2;
 	}
 	
 	public void newEventMiss() {
@@ -248,7 +244,7 @@ public class GUIScore {
 	public boolean withinHitRange(int timeDifference) {
 		int accuracy = 2 * timeDifference / accuracyLevel;
 		if (gameOver) return false;
-		return (accuracy >= IGNORE_BELOW_THRESHOLD) && (accuracy <= IGNORE_ABOVE_THRESHOLD);
+		return (accuracy >= -9) && (accuracy <= 6);
 	}
 	
 	// Triggered upon arrow press
@@ -259,9 +255,9 @@ public class GUIScore {
 			return AccuracyTypes.X_IGNORE_ABOVE;
 		}
 		// Not GameOver
-		if (accuracy < IGNORE_BELOW_THRESHOLD) {
+		if (accuracy < -9) {
 			return AccuracyTypes.X_IGNORE_BELOW; // Underneath the arrows
-		} else if (accuracy > IGNORE_ABOVE_THRESHOLD && Tools.gameMode != Tools.OSU_MOD) {
+		} else if (accuracy > 6 && Tools.gameMode != Tools.OSU_MOD) {
 			return AccuracyTypes.X_IGNORE_ABOVE; // Above the GOOD range
 		} else {
 			int scoreIncrease;
