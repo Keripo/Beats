@@ -41,8 +41,9 @@ The open source code can be found at https://github.com/Keripo/Beats
 Future development will continue with the open source \"Beats2\" project.
 See http://beatsportable.com for the latest updates.
 
-Beats 1.7.4b FINAL - [ecb4b19803]
+Beats 1.7.4b FINAL - [5ad2816e36]
 - revert to original tap-registering window based on user feedback
+- prevent crashes from AdMob
 - this is why I need to set up beta testing for Beats2...
 
 Beats 1.7.3b FINAL - [6824473c34]
