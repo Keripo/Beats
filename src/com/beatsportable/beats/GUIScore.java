@@ -219,9 +219,8 @@ public class GUIScore {
 	//public int getHoldCount() {
 		//return holdCount;
 	//}
-	
-	// Note: The above threshold value is large because lots of first-time users tap early 
-	private final int IGNORE_ABOVE_THRESHOLD = 20;  
+	 
+	private final int IGNORE_ABOVE_THRESHOLD = 6;  
 	private final int IGNORE_BELOW_THRESHOLD = -9;
 	
 	// If a note goes this level, call newEventMiss
