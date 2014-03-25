@@ -332,9 +332,13 @@ public class MenuHome extends Activity {
 			v.vibrate(300); // ready to rumble!
 		}
 		
-		AdView adView = (AdView)this.findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		adView.loadAd(adRequest);
+		try {
+			AdView adView = (AdView)this.findViewById(R.id.adView);
+			AdRequest adRequest = new AdRequest.Builder().build();
+			adView.loadAd(adRequest);
+		} catch (Exception e) {
+			// Do nothing
+		}
 	}
 	
 	private void formatMenuItem(final TextView tv, int text) {
