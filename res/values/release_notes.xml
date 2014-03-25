@@ -2,7 +2,7 @@
 <resources>
 
 <!-- Placed here for easy updating -->
-<string name="App_version">"1.7.3b FINAL"</string>
+<string name="App_version">"1.7.4b FINAL"</string>
 
 <!-- MenuHome -->
 <string name="MenuHome_new_user_notes">
@@ -40,6 +40,10 @@ Enjoy the beta release!
 The open source code can be found at https://github.com/Keripo/Beats
 Future development will continue with the open source \"Beats2\" project.
 See http://beatsportable.com for the latest updates.
+
+Beats 1.7.4b FINAL - [ecb4b19803]
+- revert to original tap-registering window based on user feedback
+- this is why I need to set up beta testing for Beats2...
 
 Beats 1.7.3b FINAL - [6824473c34]
 - all source code now hosted on GitHub
