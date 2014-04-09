@@ -15,6 +15,7 @@ import android.media.AudioManager;
 import android.os.*;
 import android.view.*;
 import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
 import android.view.View.OnTouchListener;
 import android.widget.*;
 
@@ -362,6 +363,17 @@ public class MenuHome extends Activity {
 		tv.setShadowLayer(5f, 0, 0, Color.WHITE);
 		tv.setGravity(Gravity.CENTER);
 		// We do this instead of ColorStateList since ColorStateList doesn't deal with shadows
+		tv.setOnFocusChangeListener(new OnFocusChangeListener() {
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					tv.setTextColor(Color.WHITE);
+					tv.setShadowLayer(9f, 0, 0, Color.BLACK);
+				} else {
+					tv.setTextColor(Color.BLACK);
+					tv.setShadowLayer(7f, 0, 0, Color.WHITE);
+				}
+			}
+		});
 		tv.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent e) {
 				if (e.getAction() == MotionEvent.ACTION_DOWN) {
@@ -505,6 +517,53 @@ public class MenuHome extends Activity {
 				finish();
 			}
 		});
+		
+		// Setup navigation for TVs/keyboard
+		setupDpadNavigation();
+	}
+	
+	private static int[] viewIds = {
+		R.id.start,
+		R.id.select_song,
+		R.id.download_songs,
+		R.id.settings,
+		R.id.exit,
+		//R.id.difficulty,
+		//R.id.gameMode
+	};
+	
+	private void setupDpadNavigation() {
+		for (int i = 0; i < viewIds.length; i++) {
+			View view = findViewById(viewIds[i]);
+			view.setFocusable(true);
+			
+			int upIndex = i - 1;
+			int downIndex = i + 1;
+			if (i == 0) {
+				upIndex = viewIds.length - 1;
+			} else if (i == viewIds.length - 1) {
+				downIndex = 0;
+			}
+			view.setNextFocusUpId(viewIds[upIndex]);
+			view.setNextFocusLeftId(viewIds[upIndex]);
+			view.setNextFocusDownId(viewIds[downIndex]);
+			view.setNextFocusRightId(viewIds[downIndex]);
+		}
+		
+		setupInitialFocus();
+	}
+	
+	public void setupInitialFocus() {
+		View firstView = findViewById(viewIds[0]);
+		if (firstView != null) {
+			firstView.requestFocus();
+		}
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		setupInitialFocus();
 	}
 	
 	@Override
