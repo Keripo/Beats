@@ -9,8 +9,7 @@
 		android:minSdkVersion="5"
 		android:targetSdkVersion="19"
 	/>
-	<uses-permission android:name="android.permission.INTERNET"/> <!-- AdMob Localytics -->
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- AdMob -->
+	<uses-permission android:name="android.permission.INTERNET"/> <!-- Localytics -->
 	<uses-permission android:name="android.permission.VIBRATE"/> <!-- Game -->
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- Updates -->
 	<application
@@ -123,16 +122,5 @@
 			android:theme="@style/Theme.NoBackground"
 			android:configChanges="orientation|keyboardHidden|screenSize"
 			/>
-				 
-		<!-- AdMob -->
-		<meta-data
-			android:name="com.google.android.gms.version"
-			android:value="@integer/google_play_services_version"
-		/>
-		<activity
-			android:name="com.google.android.gms.ads.AdActivity"
-			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-		/>
-		
 	</application>
 </manifest>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:ads="http://schemas.android.com/apk/res-auto"
 	android:id="@+id/main"
 	android:orientation="vertical"
 	android:layout_width="fill_parent"
@@ -119,13 +118,4 @@
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>
-	<!-- AdMob -->
-	<com.google.android.gms.ads.AdView
-		android:id="@+id/adView"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		ads:adUnitId="@string/AdMob_key"
-		ads:adSize="BANNER"
-	/>
 </RelativeLayout>

@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="libs/UHL.jar">
+	<classpathentry exported="true" kind="lib" path="libs/UHL.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:platform:/resource/beats/libs/UHLdoc.zip!/"/>
 		</attributes>
