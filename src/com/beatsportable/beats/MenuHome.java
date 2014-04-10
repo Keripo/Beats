@@ -393,7 +393,7 @@ public class MenuHome extends Activity {
 		updateLayout();
 		
 		// Difficulty button
-		TextView difficulty = (TextView) findViewById(R.id.difficulty);
+		final TextView difficulty = (TextView) findViewById(R.id.difficulty);
 		difficulty.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				vibrate();
@@ -401,6 +401,18 @@ public class MenuHome extends Activity {
 				nextDifficulty();
 			}
 		});
+		difficulty.setOnFocusChangeListener(new OnFocusChangeListener() {
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					difficulty.setBackgroundColor(Color.BLACK);
+				} else {
+					// Using the image increases the view's height and shifts the menu a bit,
+					// so let's just forget about the background  
+					//difficulty.setBackgroundResource(R.drawable.difficulty_header);
+					difficulty.setBackgroundColor(Color.TRANSPARENT);
+				}
+			}
+		});		
 		
 		// AutoPlay button
 		TextView autoPlay = (TextView) findViewById(R.id.autoPlay);
@@ -417,7 +429,7 @@ public class MenuHome extends Activity {
 		// Game Mode
 		ImageView gameModePrev = (ImageView) findViewById(R.id.gameModePrev);
 		ImageView gameModeNext = (ImageView) findViewById(R.id.gameModeNext);
-		ImageView gameMode = (ImageView) findViewById(R.id.gameMode);
+		final ImageView gameMode = (ImageView) findViewById(R.id.gameMode);
 		
 		int maxHeight = Tools.button_h * 2 / 3;
 		gameMode.setAdjustViewBounds(true);
@@ -443,6 +455,16 @@ public class MenuHome extends Activity {
 		};
 		gameMode.setOnClickListener(onGameModeNext);
 		gameModeNext.setOnClickListener(onGameModeNext);
+		
+		gameMode.setOnFocusChangeListener(new OnFocusChangeListener() {
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					gameMode.setBackgroundColor(Color.BLACK);
+				} else {
+					gameMode.setBackgroundColor(Color.TRANSPARENT);
+				}
+			}
+		});	
 		
 		/*
 		// Background Data button
@@ -518,8 +540,8 @@ public class MenuHome extends Activity {
 		R.id.download_songs,
 		R.id.settings,
 		R.id.exit,
-		//R.id.difficulty,
-		//R.id.gameMode
+		R.id.difficulty,
+		R.id.gameMode
 	};
 	
 	private void setupDpadNavigation() {
