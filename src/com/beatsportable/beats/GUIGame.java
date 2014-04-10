@@ -200,10 +200,19 @@ public class GUIGame extends Activity {
 		if (hardwareAccelerate < 0) {
 			// Test for hardware acceleration
 			View testView = new View(this);
+			Canvas testCanvas = new Canvas();
 			setContentView(testView);
 			// Hardware acceleration support was added in Honeycomb (11)
-			if (Build.VERSION.SDK_INT >= 11 && testView.isHardwareAccelerated()) {
-				hardwareAccelerate = 1;
+			if (Build.VERSION.SDK_INT >= 11 && testView.isHardwareAccelerated() && testCanvas.isHardwareAccelerated()) {
+				try {
+					// Check if clipPath is supported
+					testCanvas.clipPath(null, null);
+					
+					// Looks like it's supported, enable hardware acceleration
+					hardwareAccelerate = 1;
+				} catch (UnsupportedOperationException e) {
+					hardwareAccelerate = 0;
+				}
 			} else {
 				hardwareAccelerate = 0;
 			}
