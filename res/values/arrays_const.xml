@@ -35,6 +35,11 @@
 		<item>3.50x</item>
 		<item>4.00x</item>
 		<item>5.00x</item>
+		<item>6.00x</item>
+		<item>7.00x</item>
+		<item>8.00x</item>
+		<item>9.00x</item>
+		<item>10.0x</item>
 	</string-array>
 	<string-array name="speedMultiplierValues">
 		<item>1</item>
@@ -49,6 +54,11 @@
 		<item>3.5</item>
 		<item>4</item>
 		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
 	</string-array>
 	
 	<string-array name="randomizeValues">

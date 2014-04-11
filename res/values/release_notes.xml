@@ -43,8 +43,9 @@ See http://beatsportable.com for the latest updates.
 
 Beats 1.7.5b FINAL - []
 - add basic AmazonTV remote/controller support
+- add more speed multiplier options
 - remove AdMob (no more ads, yay!)
-- crash fixes
+- fix a few crashes (Android 2.2 users should upgrade their phones...)
 
 ~Keripo
 
