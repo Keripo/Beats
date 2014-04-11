@@ -2,7 +2,7 @@
 <resources>
 
 <!-- Placed here for easy updating -->
-<string name="App_version">"1.7.4b FINAL"</string>
+<string name="App_version">"1.7.5b FINAL"</string>
 
 <!-- MenuHome -->
 <string name="MenuHome_new_user_notes">
@@ -36,12 +36,13 @@ Enjoy the beta release!
 "
 </string>
 <string name="MenuHome_release_notes">
-"This is the FINAL version of Beats.
+"This is the final major version of Beats 1.x.
+No new major features will be added apart from periodic bugfixes.
 The open source code can be found at https://github.com/Keripo/Beats
 Future development will continue with the open source \"Beats2\" project.
 See http://beatsportable.com for the latest updates.
 
-Beats 1.7.5b FINAL - []
+Beats 1.7.5b FINAL - [6808bdf]
 - add basic AmazonTV remote/controller support
 - add more speed multiplier options
 - remove AdMob (no more ads, yay!)

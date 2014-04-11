@@ -2,7 +2,7 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.beatsportable.beats"
-	android:versionCode="20"
+	android:versionCode="21"
 	android:versionName="@string/App_version"
 	android:installLocation="auto">
 	<uses-sdk
